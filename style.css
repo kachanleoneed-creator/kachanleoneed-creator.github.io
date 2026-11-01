@@ -237,3 +237,4 @@ section>.wrap{flex:1 1 100%;width:100%;min-width:0}
 .pmc{cursor:pointer;display:block}.pmc input{position:absolute;opacity:0}.pmb{display:flex;flex-direction:column;gap:4px;border:1px solid #2a2a2a;border-radius:14px;padding:14px;height:100%;transition:.2s}.pmc input:checked+.pmb{border-color:#fff;box-shadow:0 0 0 1px #fff}.pmc input:focus-visible+.pmb{outline:2px solid #fff}.pmb small{color:#999;font-size:12px}.pml{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}.pml svg{background:#fff;border-radius:4px;padding:2px}
 .tots>div{display:flex;justify-content:space-between;padding:6px 0}.tots .gt{border-top:1px solid #333;margin-top:6px;padding-top:12px;font-size:20px}.fbt{border:1px dashed #333;border-radius:12px;padding:12px;margin:14px 0}.fbt .opt{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:8px 0}
 .btn.big{padding:18px 22px;font-size:17px}
+.buyrow .btn,.btn.main{white-space:nowrap}
