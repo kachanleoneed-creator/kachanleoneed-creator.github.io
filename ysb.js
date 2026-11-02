@@ -22,7 +22,7 @@ function roll(to){var els=$$('.nbx-p,.sbar .wrap>b');if(cur===null||!els.length)
  var from=cur,t0=performance.now(),dur=RM?0:800;cancelAnimationFrame(raf);cur=to;
  els.forEach(function(el){el.classList.remove('roll');void el.offsetWidth;if(!RM&&from!==to)el.classList.add('roll')});
  (function st(t){var k=dur?Math.min(1,(t-t0)/dur):1;k=1-Math.pow(1-k,3);var v=fm(from+(to-from)*k);els.forEach(function(el){el.textContent=v});if(k<1)raf=requestAnimationFrame(st)})(t0)}
-function render(anim){
+function render(anim){setTimeout(function(){document.dispatchEvent(new CustomEvent('ysb',{detail:sel}))});
  $$('[data-ymod]').forEach(function(b){b.classList.toggle('on',!!sel[b.dataset.ymod])});
  var on=ORD.filter(function(k){return sel[k]}),ch=on.map(function(k){return'<button class="ych" type="button" data-rm="'+k+'" aria-label="Убрать '+MOD[k].n+'">'+MOD[k].c+'<i>×</i></button>'}).join(''),
  bd=on.length?'Core'+on.map(function(k){return' + '+fm(MOD[k].p)}).join(''):'Yarbo Core';
@@ -31,7 +31,7 @@ function render(anim){
   var s=$('.nbx-r span,.btn.red span',bar);if(s)s.textContent=on.length?'В корзину: Core + '+on.map(function(k){return MOD[k].n}).join(' + '):'В корзину'});
  d.body.classList.toggle('ysbchips',on.length>0);roll(total());
 }
-function set(m,v,user){if(v&&m==='trim'&&!sel.mow)return;sel[m]=v;if(!v){removed[m]=1;if(m==='mow'){sel.trim=false}}else if(user)removed[m]=0;render(true)}
+function set(m,v,user){if(user&&v&&window.ymOffer)setTimeout(function(){window.ymOffer(m)},400);if(v&&m==='trim'&&!sel.mow)return;sel[m]=v;if(!v){removed[m]=1;if(m==='mow'){sel.trim=false}}else if(user)removed[m]=0;render(true)}
 d.addEventListener('click',function(e){var t=e.target.closest('[data-rm]');if(t){set(t.dataset.rm,false,1);return}
  t=e.target.closest('[data-ymod]');if(t){var m=t.dataset.ymod,v=!sel[m];if(m==='trim'&&v&&!sel.mow){set('mow',true,1)}set(m,v,1);if(m==='trim'&&v)snapTrim();return}
  t=e.target.closest('[data-yflip]');if(t&&window.ehSeason){ehSeason(t.dataset.yflip,1);sec.scrollIntoView({behavior:RM?'auto':'smooth'})}});
@@ -94,5 +94,5 @@ function setH(){sec.style.setProperty('--yh',W()?'420vh':'640vh')}
 setupBar();render(false);
 if(!RM){setH();rs();addEventListener('resize',rs);var tk=0;addEventListener('scroll',function(){if(!tk){tk=1;requestAnimationFrame(function(){tk=0;frame()})}},{passive:true});frame();requestAnimationFrame(leaves);
  var lw=W();new MutationObserver(function(){if(W()===lw)return;lw=W();setH();clicked={};frame()}).observe(d.body,{attributes:true,attributeFilter:['class']});}
-window.ysbState=function(){return{sel:sel,P:P}};
+window.ysbSet=function(m,v){set(m,v,1)};window.ysbState=function(){return{sel:sel,P:P}};
 })();
