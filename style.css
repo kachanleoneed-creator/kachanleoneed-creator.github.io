@@ -245,5 +245,5 @@ section>.wrap{flex:1 1 100%;width:100%;min-width:0}
 .rfl{display:inline-flex;align-items:center;gap:6px;background:#FEE600;border-radius:6px;padding:0 8px 0 0;height:22px;color:#000;font-size:11px}
 .sbar{background:#C41E3A!important;border-top:0!important;box-shadow:0 -10px 30px rgba(196,30,58,.45)}.sbar .wrap{padding:12px 0!important}.sbar .sbn{color:#fff;opacity:.9}.sbar b{color:#fff;font-family:Montserrat;font-size:22px!important;font-weight:900;margin-left:auto}.sbar .btn.red{background:#fff!important;color:#C41E3A!important;font-weight:800;animation:sbp 2.2s ease-in-out infinite}.sbar .btn.ghost{border-color:rgba(255,255,255,.7)!important;color:#fff!important}
 @keyframes sbp{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.6)}50%{box-shadow:0 0 0 10px rgba(255,255,255,0)}}
-@media(max-width:600px){.sbar .sbn{display:none}.sbar b{font-size:18px!important;margin-left:0}.sbar .btn.red{flex:1;justify-content:center}}
+@media(max-width:600px){.sbar .wrap{padding:10px 16px!important}.sbar .sbn{display:none}.sbar b{font-size:18px!important;margin-left:0}.sbar .btn.red{flex:1;justify-content:center}}
 .ypw{display:inline-flex;background:#fff;border-radius:6px;padding:2px 6px}
