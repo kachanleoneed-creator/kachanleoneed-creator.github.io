@@ -458,3 +458,33 @@ html.mnu-lock .hdr{z-index:201;background:transparent!important;border-color:tra
 @media(prefers-reduced-motion:reduce){.mnu,.mnu-l a,.mnu-b{transition:none!important}}
 @media(max-width:600px){.hdr .wrap{height:60px;gap:10px!important}.hdr.sm .wrap{height:52px}.hdr .hr{gap:8px!important;margin-left:auto}.hdr .ic{width:40px;height:40px}.hdr .season{flex:none}}
 html.mnu-lock #eh-cw,html.mnu-lock .bat2top,html.mnu-lock [class*="emilia"],html.mnu-lock [id*="emilia"]{visibility:hidden!important;opacity:0!important}
+/* r9 unified home buttons */
+.btn.b9{height:52px;border-radius:999px!important;padding:0 24px;font-weight:700;font-size:15px;gap:9px;justify-content:center;white-space:nowrap;transition:transform .15s,background .2s,box-shadow .2s,border-color .2s;text-decoration:none}
+.btn.b9 svg{width:19px;height:19px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.btn.b9:active{transform:scale(.97)}
+.btn.red.b9{background:#C41E3A;color:#fff;box-shadow:0 8px 22px rgba(196,30,58,.35)}.btn.red.b9:hover{background:#a8172f;filter:none}
+.btn.ghost.b9,.btn.dark.b9{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);color:#fff;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.btn.ghost.b9:hover,.btn.dark.b9:hover{border-color:rgba(196,30,58,.7);box-shadow:0 0 0 3px rgba(196,30,58,.15)}
+.light .btn.dark.b9,.light .btn.ghost.b9{background:#111;border-color:#111;color:#fff;backdrop-filter:none;-webkit-backdrop-filter:none}
+.btns.hb9{display:flex;gap:12px;flex-wrap:wrap}
+.hm9>div{background:rgba(20,20,22,.45);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:10px 16px;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);line-height:1.25;color:#c9c9c9}
+.hero .hmeta .wrap.hm9{gap:12px}
+@media(max-width:600px){
+.btns.hb9{flex-direction:column;gap:10px}.btns.hb9 .btn{width:100%;height:52px}
+.hero .hmeta .wrap.hm9{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:0 18px;font-size:11px}
+.hm9>div{padding:9px 8px;text-align:center;border-radius:14px;-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(20,20,22,.7)}
+.hm9 b{font-size:15px!important;white-space:nowrap;margin-bottom:2px}
+.hero .hmeta{bottom:18px}}
+@media(max-width:600px){.hero .sw{display:none}}
+/* r9 site-wide unified buttons */
+.btn{border-radius:999px!important;font-weight:700;justify-content:center;transition:transform .15s,background .2s,box-shadow .2s,border-color .2s}
+.btn:active{transform:scale(.97)}
+.btn.red{background:#C41E3A}.btn.red:hover{background:#a8172f;filter:none}
+.btn.ghost,.btn.dark{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.22);color:#fff}
+.btn.ghost:hover,.btn.dark:hover{border-color:rgba(196,30,58,.7);box-shadow:0 0 0 3px rgba(196,30,58,.15)}
+.light .btn.ghost,.light .btn.dark{background:#111;border-color:#111;color:#fff}
+.mbar .btn,.btn.sm{border-radius:999px!important}
+@media(max-width:600px){.btn{max-width:100%;white-space:normal;text-align:center;line-height:1.2}}
+#cartpage:not(:empty)~#cempty{display:none!important}
+.btn.sm{white-space:nowrap!important}
+@media(max-width:600px){.eh-cw{transform:scale(.72)!important}.emv-fab{transform:scale(.72)!important}}
