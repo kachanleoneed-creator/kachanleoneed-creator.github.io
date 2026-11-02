@@ -23,7 +23,7 @@ function render(){var c=get(),n=0,s=0;c.forEach(function(x){n+=x.q;s+=x.q*x.p});
 function openC(o){$('.drawer').classList.toggle('on',o);$('.shade').classList.toggle('on',o)}
 $$('.opencart').forEach(function(b){b.onclick=function(e){e.preventDefault();openC(true)}});
 $('.shade').onclick=function(){openC(false)};$('.drawer .x').onclick=function(){openC(false)};
-$$('[data-add]').forEach(function(b){b.onclick=function(e){e.preventDefault();var d=JSON.parse(b.dataset.add);if(window.curOpt&&b.classList.contains('main'))d=curOpt();addCart(d);b.classList.add('ok')}});
+$$('[data-add]').forEach(function(b){b.onclick=function(e){e.preventDefault();var d=JSON.parse(b.dataset.add);if(window.curOpt&&b.classList.contains('main'))d=curOpt();addCart(d);b.classList.add('ok');var s=b.querySelector('span');if(s&&b.classList.contains('cartb'))s.textContent='В корзине ✓'}});
 render();window.addEventListener('storage',render);
 /* order form */
 var of=$('#orderf');if(of)of.onsubmit=function(e){e.preventDefault();if(!get().length){toast('Корзина пуста');return}localStorage.removeItem('ehcart');render();of.innerHTML='<h3>Спасибо! Это демо — заказ никуда не отправлен.</h3><p class="mut">На боевом сайте менеджер перезвонит в течение 15 минут (9:00–21:00).</p>'};
@@ -72,3 +72,4 @@ if($('#map')&&window.L){var m=L.map('map',{crs:L.CRS.EPSG3395,attributionControl
  $('#mclr').onclick=function(){pts=[];mk.forEach(function(x){m.removeLayer(x)});mk=[];draw()};
  $('#mfind').onclick=function(){var q=$('#maddr').value;if(!q)return;fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=ru&accept-language=ru&q='+encodeURIComponent(q)).then(function(r){return r.json()}).then(function(j){if(j[0])m.setView([+j[0].lat,+j[0].lon],18);else toast('Адрес не найден')}).catch(function(){toast('Поиск недоступен')})};}
 })();
+;(function(){var b=document.createElement('button');b.className='bat2top';b.setAttribute('aria-label','Наверх');b.innerHTML='<span class="bt-cap"></span><span class="bt-body"><span class="bt-fill"></span><span class="bt-pc">0%</span></span><span class="bt-up">↑</span>';document.body.appendChild(b);var f=b.querySelector('.bt-fill'),p=b.querySelector('.bt-pc');function u(){var h=document.documentElement.scrollHeight-innerHeight,v=h>0?Math.min(100,Math.round(scrollY/h*100)):0;f.style.height=v+'%';p.textContent=v+'%';b.classList.toggle('on',scrollY>400)}addEventListener('scroll',u,{passive:true});addEventListener('resize',u);u();b.onclick=function(){scrollTo({top:0,behavior:'smooth'})}})();
