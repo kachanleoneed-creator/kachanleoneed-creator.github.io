@@ -506,3 +506,13 @@ html.mnu-lock #eh-cw,html.mnu-lock .bat2top,html.mnu-lock [class*="emilia"],html
 @media(prefers-reduced-motion:reduce){.cn10av{animation:none}}
 @media(max-width:600px){.cns10{padding:44px 0}.cn10{padding:28px 18px;border-radius:22px}.cn10av{width:54px;height:54px}.cn10 h2{font-size:26px}.cn10 p{font-size:14px;margin-bottom:20px}.cn10b{gap:10px}.cn10b a{height:50px;font-size:14px}}
 .cn10 h2 em{white-space:nowrap}.cn10tg svg{background:#fff;border-radius:50%;padding:1px;box-shadow:0 2px 6px rgba(0,0,0,.2)}.cn10mx svg{border-radius:7px;box-shadow:0 0 0 2px rgba(255,255,255,.9)}
+/* r10 winter */
+body.w .ns{display:none!important}
+.wban{background:linear-gradient(90deg,rgba(80,150,255,.18),rgba(196,30,58,.14));border-bottom:1px solid rgba(255,255,255,.1)}
+.wban .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-top:12px;padding-bottom:12px;color:#dfe9ff;font-size:14px}
+.wban .btn.b9{height:42px;font-size:14px;padding:0 18px}
+.zima .zh{min-height:620px}
+.zima .zg .gal{max-width:900px;margin:0 auto}
+.zsv .card{text-decoration:none;color:inherit}
+body.w{--wtint:#7fb4ff}
+@media(max-width:600px){.wban .wrap{flex-direction:column;align-items:stretch;text-align:center;font-size:13px}.wban .btn.b9{width:100%}.zima .zh{min-height:600px}}
