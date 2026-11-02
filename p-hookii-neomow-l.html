@@ -17,90 +17,86 @@
 <div class="setup6"><div class="s6h"><svg class="s6i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg><b>Настроим всё за вас</b></div><p>Приедем: станция, карта участка, зоны и расписание. Цена — после пары вопросов.</p><div class="s6b"><a class="gbtn sm" target="_blank" rel="noopener" href="https://t.me/ElectroHUB_consult_bot"><svg class="mi" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#26A5E4"/><path fill="#fff" d="M5.4 11.8l11.6-4.5c.5-.2 1 .1.8.9l-2 9.3c-.1.7-.5.8-1.1.5l-3-2.2-1.4 1.4c-.2.2-.3.3-.6.3l.2-3.1 5.6-5c.2-.2 0-.3-.4-.1l-6.9 4.3-3-.9c-.6-.2-.7-.7.2-.9z"/></svg><span>Telegram</span></a><a class="gbtn sm" target="_blank" rel="noopener" href="https://max.ru/id770500837792_2_bot"><svg class="mi" viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="mxg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3FB7FF"/><stop offset=".55" stop-color="#5B5BFF"/><stop offset="1" stop-color="#9B3DF2"/></linearGradient></defs><path fill="url(#mxg)" fill-rule="evenodd" d="M50.7571 0.261719C78.2929 0.261719 99.8857 22.5974 99.8857 50.1474C99.8857 77.6974 77.6071 99.4903 51.0214 99.4903C41.5857 99.4903 37.0143 98.1617 29.65 92.9474C29.1429 92.5903 28.45 92.6831 28.0214 93.1403C22.3571 99.1831 7.85 103.426 7.18571 95.176C7.18571 80.7903 0 71.4474 0 49.876C0 21.5546 23.2214 0.261719 50.7571 0.261719ZM51.5286 24.8117C38.4643 24.126 28.2643 33.1974 26.0143 47.3831C24.15 59.1332 27.45 73.4546 30.2786 74.176C31.4786 74.4832 34.3571 72.276 36.4571 70.2974C36.85 69.926 37.45 69.8617 37.9071 70.1474C41.1786 72.1474 44.8786 73.6474 48.9571 73.8617C62.3714 74.5617 74.2571 64.0617 74.9643 50.6474C75.6643 37.2331 64.9429 25.5046 51.5286 24.8046V24.8117Z"/></svg><span>MAX</span></a><a class="gbtn sm" href="contacts.html"><svg class="mi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 5h16v14H4z"/><path d="M4 7l8 6 8-6"/></svg><span>Заявка</span></a></div></div><div class="specs"><div><small>Навигация</small>LiDAR / камеры</div><div><small>Провод</small>не нужен</div><div><small>Серия</small>L</div><div><small>Приложение</small>Hookii</div></div>
 <div class="card" style="margin-top:22px"><h3 id="dwhere-h">Куда доставить?</h3><input id="dwhere" type="text" placeholder="Город или адрес, например: Истра" autocomplete="address-level2"><p id="dwres" style="margin:8px 0 12px"></p><label class="f">или выберите город</label><select id="dcity"><option data-c="0" data-d="самовывоз, 1-я Магистральная, вл4с7">Москва — самовывоз</option><option data-c="2 500" data-d="1–2 дня">Москва и МО — курьер</option><option data-c="4 900" data-d="3–5 дней">Санкт-Петербург</option><option data-c="6 900" data-d="5–8 дней">Екатеринбург</option><option data-c="5 900" data-d="4–6 дней">Краснодар</option><option data-c="8 900" data-d="7–10 дней">Новосибирск</option></select><div class="carr"><small class="mut">Транспортная компания</small><div class="carrg"><label class="cr"><input type="radio" name="carr" value="dl" data-k="dl" data-x="1.0" checked><span title="Деловые Линии"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQ0IiBoZWlnaHQ9IjM3IiB2aWV3Qm94PSIwIDAgMjQ0IDM3IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik00LjIwMiAyNS45NTdMMjAuNzggMjkuMTRsMS4yODgtMi4yMjNMNy4zMzIgMjAuNTVsLTMuMTMgNS40MDh6bTcuNjgtMTMuMjY3bDEyLjg5NSA5LjU1NCAxLjI4OC0yLjIyNEwxNS4wMTMgNy4yODJsLTMuMTMgNS40MDh6TTguMDMgMTkuMzQ4bDE0LjczNiA2LjM2OSAxLjMxMy0yLjI3Mi0xMi44OTUtOS41NTMtMy4xNTQgNS40NTZ6TTE5LjIyNyAwbC0zLjQ4IDYuMDJMMjYuOCAxOC43NmwxLjYzOC0yLjgyNEwxOS4yMjcgMHpNMCAzMy4yMjdoMTguNDJsMS42MzctMi44MjRMMy40OCAyNy4yMiAwIDMzLjIyN3ptMjkuMjMxLTcuNDM4bDQuMzEgNy40MzhoNC45bC05LjIxLTE1LjkyMi05LjIxIDE1LjkyMmg0LjlsNC4zMS03LjQzOHoiIGZpbGw9IiNGQ0FGMTciLz48cGF0aCBkPSJNNjguNDMgMzMuMjAzaDcuMDJsMS42MTMtMi44NDhoLTguNjMydjIuODQ4em0wLTcuOTA4djIuODQ4aDkuOTFsMS42NDktMi44NDhINjguNDN6bTE0OC43ODQgMy4zNzdWMjAuMjZoLTMuMTA3djEyLjk0M2gyLjYwMWw3LjQ3Ni04LjQ3MnY4LjQ3MmgzLjEwNlYyMC4yNmgtMi43NDRsLTcuMzMyIDguNDEyek04Ni42OTUgMjAuMjZsLTcuNDQgMTIuOTQzaDMuNjZsNC45LTguNTQ1IDQuOTM2IDguNTQ1aDMuODUzbC03LjQ0LTEyLjk0M2gtMi40Njl6TTY0LjMzOSAzMC4zNTRMNTYuODk5IDE3LjRoLTIuNTRsLTcuNDQxIDEyLjk1NGgtMS44NjZWMzdoMi45NjF2LTMuNzk4aDE1LjIzVjM3aDIuOTYydi02LjY0NmgtMS44NjZ6bS0xMy43MTMgMGw0LjktOC41NTYgNC45MzYgOC41NTZoLTkuODM2ek0xNjUuODc3IDIwLjI2aC0xNC40NTl2Mi44NDhoMTIuNzk3bDEuNjYyLTIuODQ4em0tODIuOTk5IDBINjguNDMxdjIuODQ4aDEyLjc5OGwxLjY0OS0yLjg0OHptMTU4LjM3NyAwbC03LjMzMiA4LjQxMlYyMC4yNmgtMy4xMDZ2MTIuOTQzaDIuNjEybDcuNDY1LTguNDcydjguNDcySDI0NFYyMC4yNmgtMi43NDV6bS0zMy43ODIgNS4wMzVoLTYuODAyVjIwLjI2aC0zLjEwN3YxMi45NDNoMy4xMDd2LTUuMDZoNi44MDJ2NS4wNmgzLjEwNlYyMC4yNmgtMy4xMDZ2NS4wMzV6bS0zNy43OTEtNS4wMzVsLTcuNDQgMTIuOTQzaDMuNjcybDQuOS04LjU0NSA0LjkzNiA4LjU0NWgzLjg0MUwxNzIuMTUgMjAuMjZoLTIuNDY4em0tMzAuNzAxIDQuNjRoLTQuNzE5di00LjY1MWgtMy4xMDZ2MTIuOTU0aDcuODAxYzIuMTA3IDAgNC4yOTgtMS4xNjUgNC4yOTgtNC4yMTgtLjAxMi00LjAxMy0yLjgyOS00LjA4NS00LjI3NC00LjA4NXptLS4xOCA1LjU2NGgtNC41NTFWMjcuNThoNC41NTFjLjUyOSAwIDEuMzM2LjE0NCAxLjMzNiAxLjQ0MiAwIDEuMjAxLS42NjIgMS40NDItMS4zMzYgMS40NDJ6bTkuMTAyLTEwLjIwNGgtMy4wN3YxMi45NTVoMy4wN1YyMC4yNnptLTQzLjQ3My0uMzEzYy01LjE5IDAtNy42NDUgMy4xNzMtNy42NDUgNi43MTggMCAzLjcwMSAyLjM5NSA2LjcxNyA3LjY0NSA2LjcxNyAyLjI4NyAwIDcuNTg0LTEuMDU3IDcuNTg0LTYuNzE3IDAtMy43MDEtMi4zNzEtNi43MTgtNy41ODQtNi43MTh6bS0uMDM2IDEwLjU4N2MtMi45OTggMC00LjI2Mi0xLjcxOC00LjI2Mi0zLjgzMyAwLTIuMzIgMS40NDQtMy44NyA0LjI2Mi0zLjg3IDMuMTc4IDAgNC4yNjEgMS41NSA0LjI2MSAzLjg3IDAgMi43NzYtMi4wODIgMy44MzMtNC4yNjEgMy44MzN6bTQ3LjAyNCAyLjY2OWg3LjAxOWwxLjYyNS0yLjg0OGgtOC42NDR2Mi44NDh6bTAtNy45MDh2Mi44NDhoOS45MDhsMS42NjEtMi44NDhoLTExLjU2OXptMzIuNTQzIDMuMzA1di04LjM0aC0zLjEwNnYxMi45NDNoMi42MTNsNy40NzYtOC40djguNGgzLjEwNlYyMC4yNmgtMi42MTJsLTcuNDc3IDguMzR6bS01OC4zOTEtMy4wMjhjLjgxOC0uMzQ5IDEuNTE3LS45MTMgMS41MTctMi4zMiAwLTIuNjgtMi4yNTItMi45OTItMy44NDEtMi45OTJoLTguMzkxdjEyLjk1NWg4LjUzNmMzLjkxMiAwIDQuNzE5LTIuMTUxIDQuNzE5LTQuMTIyLjAxMi0yLjIyMy0xLjI1Mi0zLjEzNy0yLjU0LTMuNTIxek0xMTcuOTI1IDIzaDQuOTcyYy43NDYgMCAxLjA1OS4zODUgMS4wNTkgMS4xMyAwIC43NjktLjQ5MyAxLjE2NS0xLjA1OSAxLjE2NWgtNC45NzJWMjN6bTUuNDY2IDcuNDYzaC01LjQ2NnYtMi43NzZoNS40NjZjLjg3OCAwIDEuNTE3LjIxNiAxLjUxNyAxLjM3IDAgLjkxMy0uMzg2IDEuNDA2LTEuNTE3IDEuNDA2eiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==" alt="Деловые Линии" style="height:20px;width:auto;vertical-align:middle"></span></label><label class="cr"><input type="radio" name="carr" value="cdek" data-k="cdek" data-x="1.1"><span title="СДЭК"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQ1IiBoZWlnaHQ9IjQxIiB2aWV3Qm94PSIwIDAgMTQ1IDQxIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTIyLjcxOTkgMzAuNDcwNkgxNi40Njc0QzYuNzEzNTEgMzAuNDcwNiAxMy43OTk3IDkuNzUzOTcgMjIuMDExMyA5Ljc1Mzk3SDMxLjg5MDNDMzMuNDc0MiA5Ljc1Mzk3IDM2LjI2NyAxMC4wNDU4IDM3LjY0MjYgNi4xMjc1MkwzOS43Njg0IDAuMDQxNzQ4SDI2LjIyMTNDMTguODg1MSAwLjA0MTc0OCAxMy4xNzQ0IDIuNjI2MTIgOS4wNDc3OCA2Ljk2MTE5QzEuOTE5OTIgMTQuMzgwOCAtMC40OTc3MSAyNS45Njg4IDEuMjExMzEgMzEuNTEyN0MyLjgzNjk2IDM2LjYzOTcgNy4yNTU0IDQwLjAxNjEgMTQuMTc0OCA0MC4wOTk1TDE5LjU1MiA0MC4xNDExSDI2LjE3OTZMMjcuODA1MyAzNS4yNjQyQzI5LjAxNDEgMzEuODA0NSAyNi4zMDQ3IDMwLjQ3MDYgMjIuNzE5OSAzMC40NzA2Wk05OC44MzM4IDIxLjg4MzhMMTAwLjg3NiAxNS4yNTYySDc5LjA3NThDNzUuNDQ5NCAxNS4yNTYyIDczLjgyMzcgMTYuMjU2NiA3My4xOTg1IDE4LjM0MDdMNzEuMTU2IDI0Ljk2ODRIOTIuOTU2NEM5Ni41ODI4IDI0Ljk2ODQgOTguMjA4NSAyMy45NjggOTguODMzOCAyMS44ODM4Wk02Ny45MDQ3IDMzLjU1NTJMNjUuODYyMiA0MC4xODI4SDg3LjY2MjZDOTEuMjQ3NCA0MC4xODI4IDkyLjkxNDcgMzkuMTgyNCA5My41NCAzNy4wOTgzTDk1LjU4MjUgMzAuNDcwNkg3My43ODIxQzcwLjE5NzMgMzAuNDcwNiA2OC41NzE2IDMxLjQ3MSA2Ny45MDQ3IDMzLjU1NTJaTTEwMy45MTkgNi43MTEwOUwxMDUuOTYyIDAuMDgzNDMwOEg4NC4xNjEyQzgwLjUzNDggMC4wODM0MzA4IDc4LjkwOTEgMS4wODM4MyA3OC4yODM5IDMuMTY4TDc2LjI0MTQgOS43OTU2Nkg5OC4wNDE4QzEwMS42MjcgOS43OTU2NiAxMDMuMjUyIDguNzk1MjYgMTAzLjkxOSA2LjcxMTA5Wk03MC45ODkzIDguMDQ0OTZDNzAuMDcyMiAxLjg3NTgyIDY2Ljc3OTIgMC4wODM0MzA4IDU4Ljc3NiAwLjA4MzQzMDhINDQuMTg2OUwzNS42ODM1IDI0Ljk2ODRINDEuMDYwNkM0NC4yNzAyIDI0Ljk2ODQgNDUuODk1OSAyNS4wMTAxIDQ3LjYwNDkgMjAuNDI0OUw1MS4xNDggOS43NTM5N0g1Ni41NjY4QzYxLjE5MzcgOS43NTM5NyA2MC4xNTE2IDE1LjU0OCA1Ny44MTczIDIxLjE3NTJDNTUuNzMzMiAyNi4xMzU1IDUyLjEwNjcgMzAuNTEyMyA0Ny43Mjk5IDMwLjUxMjNIMzguNjg0N0MzNS4wNTgyIDMwLjUxMjMgMzMuMzkwOSAzMS41MTI3IDMyLjcyMzkgMzMuNTk2OUwzMC40NzMgNDAuMjI0NUgzNy4xMDA3TDQzLjYwMzMgNDAuMTgyOEM0OS4zNTU2IDQwLjE0MTEgNTQuMDY1OCAzOS43MjQzIDU5LjU2OCAzNC43NjRDNjUuNDAzNyAyOS40NzAyIDcyLjE1NjQgMTUuODgxNCA3MC45ODkzIDguMDQ0OTZaTTE0NC4yNjkgMC4wNDE3NDhIMTMxLjYzOUwxMTkuNzU5IDEyLjY3MThDMTE4LjM4MyAxNC4xMzA3IDExNi45NjYgMTUuNTg5NiAxMTUuNTkgMTcuMjk4N0gxMTUuNDY1TDEyMS4zODQgMC4wNDE3NDhIMTExLjA4OUw5Ny4yMDgxIDQwLjE4MjhIMTA3LjUwNEwxMTEuOTIyIDI3LjU1MjhMMTE2LjUwNyAyMy42NzYyTDEyMC4xMzQgMzUuMDk3NUMxMjEuMjU5IDM4LjY0MDUgMTIyLjQyNyA0MC4xODI4IDEyNC45MjggNDAuMTgyOEgxMzIuODA2TDEyNC43MTkgMTcuNzU3MkwxNDQuMjY5IDAuMDQxNzQ4WiIgZmlsbD0iIzAwQjMzQyIvPgo8L3N2Zz4K" alt="СДЭК" style="height:18px;width:auto;vertical-align:middle"></span></label><label class="cr"><input type="radio" name="carr" value="pek" data-k="pek" data-x="0.95"><span title="ПЭК"><b class="pekw">ПЭК</b></span></label><label class="cr"><input type="radio" name="carr" value="yd" data-k="yd" data-x="1.25"><span title="Яндекс Доставка"><img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQwIiBoZWlnaHQ9IjMwIiB2aWV3Qm94PSIwIDAgMjQwIDMwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNNDQuODE0MyAyOS4wOTk5SDQxLjc5ODVWMjUuNDE1NkgzMy40NDQ5VjI5LjA5OTlIMzAuNDI5MVYyMi41OTY0SDMxLjQyNDNDMzEuNzQ2IDIxLjkxMjkgMzIuMDA3MyAyMS4xMDEzIDMyLjIwODQgMjAuMTYxNkMzMi40MDk0IDE5LjIwMDUgMzIuNTcwMyAxOC4xODYgMzIuNjkwOSAxNy4xMTgxQzMyLjgxMTUgMTYuMDUwMSAzMi44OTIgMTQuOTYwOSAzMi45MzIyIDEzLjg1MDNDMzIuOTcyNCAxMi43Mzk3IDMyLjk5MjUgMTEuNjgyNCAzMi45OTI1IDEwLjY3ODZWOS4zMDEwMUg0My4yMTU5VjIyLjU5NjRINDQuODE0M1YyOS4wOTk5Wk0xMC4yODM4IDYuMTYxMzhIOC42NTUyNUM3LjE0NzM3IDYuMTYxMzggNi4wMTE0MyA2LjUyNDQ3IDUuMjQ3NDQgNy4yNTA2NEM0LjQ4MzQ0IDcuOTc2ODIgNC4xMDE0NCA4LjkzNzkzIDQuMTAxNDQgMTAuMTM0QzQuMTAxNDQgMTAuODE3NCA0LjE3MTgxIDExLjQxNTUgNC4zMTI1NSAxMS45MjgxQzQuNDUzMjggMTIuNDE5MyA0LjY1NDMzIDEyLjg3ODUgNC45MTU3IDEzLjMwNTZDNS4xOTcxNyAxMy43MzI4IDUuNTM4OTYgMTQuMTM4NiA1Ljk0MTA2IDE0LjUyMzFDNi4zNjMyNyAxNC44ODYxIDYuODU1ODQgMTUuMjcwNiA3LjQxODc5IDE1LjY3NjRMOS4yNTg0MSAxNi45ODk5TDMuOTUwNjYgMjUuNDE1NkgwTDQuNzY0OTEgMTcuODg2OUM0LjA4MTM0IDE3LjM3NDMgMy40NjgxMyAxNi44NTExIDIuOTI1MjkgMTYuMzE3MUMyLjQwMjU2IDE1Ljc4MzIgMS45NjAyNSAxNS4yMTcyIDEuNTk4MzYgMTQuNjE5MkMxLjIzNjQ2IDE0LjAyMTEgMC45NTQ5OTMgMTMuMzgwNCAwLjc1Mzk0MiAxMi42OTY5QzAuNTcyOTk2IDExLjk5MjEgMC40ODI1MjMgMTEuMjEyNiAwLjQ4MjUyMyAxMC4zNTgyQzAuNDgyNTIzIDkuMjkwMzMgMC42NTM0MTYgOC4zMTg1NCAwLjk5NTIwMyA3LjQ0Mjg3QzEuMzU3MSA2LjU0NTgzIDEuODc5ODMgNS43ODc2MiAyLjU2MzQgNS4xNjgyNEMzLjI0Njk4IDQuNTI3NDkgNC4wOTEzOSA0LjAzNjI2IDUuMDk2NjUgMy42OTQ1M0M2LjEyMjAxIDMuMzMxNDUgNy4yOTgxNiAzLjE0OTkgOC42MjUxIDMuMTQ5OUgxMy45MzI4VjI1LjQxNTZIMTAuMjgzOFY2LjE2MTM4Wk00OS4zOTgzIDE4LjYyMzhDNDkuNDU4NiAyMC4wNzYxIDQ5Ljc4MDMgMjEuMTU0NyA1MC4zNjMzIDIxLjg1OTVDNTAuOTQ2NCAyMi41NjQzIDUxLjkzMTUgMjIuOTE2OCA1My4zMTg4IDIyLjkxNjhDNTQuMTYzMiAyMi45MTY4IDU0Ljk5NzUgMjIuNzY3MiA1NS44MjE5IDIyLjQ2ODJDNTYuNjY2MyAyMi4xNDc5IDU3LjM1OTkgMjEuNzk1NSA1Ny45MDI3IDIxLjQxMVYyNC4zMjY0QzU3LjM4IDI0LjcxMDggNTYuNzE2NSAyNS4wNDE5IDU1LjkxMjMgMjUuMzE5NUM1NS4xMDgxIDI1LjU5NzIgNTQuMTQzMSAyNS43MzYgNTMuMDE3MiAyNS43MzZDNTAuNzY1NCAyNS43MzYgNDkuMDI2MyAyNS4wNTI2IDQ3Ljc5OTkgMjMuNjg1NkM0Ni41OTM2IDIyLjMxODcgNDUuOTkwNSAyMC4yMjU2IDQ1Ljk5MDUgMTcuNDA2NEM0NS45OTA1IDE2LjE4OSA0Ni4xMTExIDE1LjA2NzcgNDYuMzUyMyAxNC4wNDI1QzQ2LjYxMzcgMTMuMDE3MyA0Ny4wMDU4IDEyLjEzMSA0Ny41Mjg1IDExLjM4MzRDNDguMDUxMiAxMC42MTQ1IDQ4LjcwNDYgMTAuMDI3MiA0OS40ODg3IDkuNjIxMzhDNTAuMjkyOSA5LjE5NDIyIDUxLjIyNzggOC45ODA2NCA1Mi4yOTM0IDguOTgwNjRDNTMuMTU3OSA4Ljk4MDY0IDUzLjk0MiA5LjExOTQ3IDU0LjY0NTcgOS4zOTcxM0M1NS4zNjk1IDkuNjc0NzggNTUuOTgyNyAxMC4xMjMzIDU2LjQ4NTMgMTAuNzQyN0M1Ni45ODggMTEuMzYyMSA1Ny4zNjk5IDEyLjE2MyA1Ny42MzEzIDEzLjE0NTVDNTcuOTEyOCAxNC4xMDY2IDU4LjA1MzUgMTUuMjkxOSA1OC4wNTM1IDE2LjcwMTZWMTguNjIzOEg0OS4zOTgzWk0yOC42MTk2IDkuMzAxMDFWMjUuNDE1NkgyNS4zMzI0VjE4LjU5MThIMjAuMjM1OFYyNS40MTU2SDE2Ljk0ODZWOS4zMDEwMUgyMC4yMzU4VjE1Ljc3MjVIMjUuMzMyNFY5LjMwMTAxSDI4LjYxOTZaTTY0LjA1NDkgMTcuMzEwM1YyNS40MTU2SDYwLjc2NzdWOS4zMDEwMUg2NC4wNTQ5VjE3LjA4Nkw2OS4zNjI2IDkuMzAxMDFINzIuODAwNkw2Ny42NDM3IDE2Ljg2MThMNzMuNDY0MSAyNS40MTU2SDY5LjYwMzlMNjQuMDU0OSAxNy4zMTAzWk04MC40OTA4IDI1LjczNkM3OC4xMTg0IDI1LjczNiA3Ni4zNTkyIDI1LjAyMDUgNzUuMjEzMiAyMy41ODk1Qzc0LjA4NzMgMjIuMTU4NSA3My41MjQ0IDIwLjA4NjggNzMuNTI0NCAxNy4zNzQzQzczLjUyNDQgMTYuMTU2OSA3My42NjUxIDE1LjAzNTYgNzMuOTQ2NiAxNC4wMTA1Qzc0LjI0ODIgMTIuOTYzOSA3NC42ODA1IDEyLjA3NzYgNzUuMjQzNCAxMS4zNTE0Qzc1LjgyNjQgMTAuNjAzOSA3Ni41NDAyIDEwLjAyNzIgNzcuMzg0NiA5LjYyMTM4Qzc4LjIyOSA5LjE5NDIyIDc5LjIxNDIgOC45ODA2NCA4MC4zNCA4Ljk4MDY0QzgxLjIwNDYgOC45ODA2NCA4MS45NDg1IDkuMDU1NCA4Mi41NzE3IDkuMjA0OUM4My4xOTUgOS4zMzMwNSA4My42ODc1IDkuNTE0NTkgODQuMDQ5NCA5Ljc0OTUzVjEyLjgyNTFDODMuNzA3NiAxMi41OTAxIDgzLjIzNTIgMTIuMzY1OSA4Mi42MzIgMTIuMTUyM0M4Mi4wMjg5IDExLjkzODcgODEuMzk1NiAxMS44MzE5IDgwLjczMjEgMTEuODMxOUM3OS41MDU3IDExLjgzMTkgNzguNTYwNyAxMi4yOTExIDc3Ljg5NzMgMTMuMjA5NUM3Ny4yNTM5IDE0LjEwNjYgNzYuOTMyMiAxNS40NjI4IDc2LjkzMjIgMTcuMjc4MkM3Ni45MzIyIDE5LjAwODIgNzcuMjIzOCAyMC4zNzUxIDc3LjgwNjggMjEuMzc5Qzc4LjM4OTggMjIuMzgyOCA3OS4zNTQ5IDIyLjg4NDcgODAuNzAxOSAyMi44ODQ3QzgxLjQyNTcgMjIuODg0NyA4Mi4wNDkgMjIuNzg4NiA4Mi41NzE3IDIyLjU5NjRDODMuMTE0NiAyMi4zODI4IDgzLjYwNzEgMjIuMTE1OCA4NC4wNDk0IDIxLjc5NTVWMjQuNzQyOUM4My42MjcyIDI1LjA2MzIgODMuMTI0NiAyNS4zMDg5IDgyLjU0MTYgMjUuNDc5N0M4MS45Nzg2IDI1LjY1MDYgODEuMjk1IDI1LjczNiA4MC40OTA4IDI1LjczNlpNMzkuOTI4OCAxMi4xMjAzSDM1Ljg4NzZWMTIuNzkzMUMzNS44ODc2IDEzLjQ5NzkgMzUuODY3NSAxNC4yODgxIDM1LjgyNzMgMTUuMTYzOEMzNS43ODcxIDE2LjAzOTUgMzUuNzE2NyAxNi45MjU4IDM1LjYxNjIgMTcuODIyOUMzNS41MTU3IDE4LjcxOTkgMzUuMzc1IDE5LjU4NDkgMzUuMTk0IDIwLjQxNzlDMzUuMDMzMiAyMS4yNTA4IDM0LjgyMjEgMjEuOTc3IDM0LjU2MDcgMjIuNTk2NEgzOS45Mjg4VjEyLjEyMDNaTTUyLjIzMzEgMTEuNzk5OUM1MS4zMDgzIDExLjc5OTkgNTAuNjE0NiAxMi4xNjMgNTAuMTUyMiAxMi44ODkyQzQ5LjY4OTggMTMuNTk0IDQ5LjQzODUgMTQuNjI5OCA0OS4zOTgzIDE1Ljk5NjhINTQuNzA2VjE1LjU4MDNDNTQuNzA2IDE1LjA0NjMgNTQuNjY1OCAxNC41NTUxIDU0LjU4NTQgMTQuMTA2NkM1NC41MDUgMTMuNjM2NyA1NC4zNjQyIDEzLjIzMDkgNTQuMTYzMiAxMi44ODkyQzUzLjk4MjIgMTIuNTQ3NCA1My43MzA5IDEyLjI4MDUgNTMuNDA5MiAxMi4wODgyQzUzLjEwNzcgMTEuODk2IDUyLjcxNTYgMTEuNzk5OSA1Mi4yMzMxIDExLjc5OTlaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTI0LjczMiAyOS45OTk5VjIyLjM2MDRIMTI2LjE0OEMxMjYuNjMgMjEuNTA4MSAxMjYuOTcxIDIwLjI4MjggMTI3LjE3MiAxOC42ODQ1QzEyNy4zOTIgMTcuMDY1IDEyNy41NTMgMTQuOTM0MSAxMjcuNjUzIDEyLjI5MTdMMTI3Ljk1NSAzLjE0OTlIMTQwLjI0MlYyMi4zNjA0SDE0Mi4yVjI5Ljk5OTlIMTM4Ljc5N1YyNS4zNjUxSDEyOC4xMzVWMjkuOTk5OUgxMjQuNzMyWk0xMzEuMDg3IDEyLjgwMzFDMTMxLjA0NyAxNC4xMjQzIDEzMC45ODYgMTUuMjk2MyAxMzAuOTA2IDE2LjMxOTJDMTMwLjgyNiAxNy4zNDIgMTMwLjcyNSAxOC4yMzcgMTMwLjYwNSAxOS4wMDQyQzEzMC41MDUgMTkuNzcxMyAxMzAuMzg0IDIwLjQzMTkgMTMwLjI0NCAyMC45ODZDMTMwLjEwMyAyMS41MTg3IDEyOS45NTIgMjEuOTc2OSAxMjkuNzkyIDIyLjM2MDRIMTM2LjU5OFY2LjE1NDU1SDEzMS4yOThMMTMxLjA4NyAxMi44MDMxWiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTE1MC40MDYgOC45Njc0QzE1MS4zODkgOC45Njc0IDE1Mi4yOTMgOS4xNDg1MyAxNTMuMTE2IDkuNTEwOEMxNTMuOTM5IDkuODczMDYgMTU0LjY0MiAxMC40MTY1IDE1NS4yMjQgMTEuMTQxQzE1NS44MDYgMTEuODQ0MiAxNTYuMjU4IDEyLjcxNzkgMTU2LjU3OSAxMy43NjJDMTU2LjkyMSAxNC43ODQ5IDE1Ny4wOTEgMTUuOTY3NiAxNTcuMDkxIDE3LjMxMDFDMTU3LjA5MSAxOC42NTI2IDE1Ni45MjEgMTkuODQ1OSAxNTYuNTc5IDIwLjg5MDFDMTU2LjI1OCAyMS45MzQyIDE1NS44MDYgMjIuODE4NiAxNTUuMjI0IDIzLjU0MzFDMTU0LjY0MiAyNC4yNDYzIDE1My45MzkgMjQuNzc5MSAxNTMuMTE2IDI1LjE0MTNDMTUyLjI5MyAyNS41MDM2IDE1MS4zODkgMjUuNjg0NyAxNTAuNDA2IDI1LjY4NDdDMTQ5LjQyMiAyNS42ODQ3IDE0OC41MTggMjUuNTAzNiAxNDcuNjk1IDI1LjE0MTNDMTQ2Ljg3MiAyNC43NzkxIDE0Ni4xNjkgMjQuMjQ2MyAxNDUuNTg3IDIzLjU0MzFDMTQ1LjAwNSAyMi44MTg2IDE0NC41NDMgMjEuOTQ0OSAxNDQuMjAyIDIwLjkyMkMxNDMuODggMTkuODc3OSAxNDMuNzIgMTguNjg0NSAxNDMuNzIgMTcuMzQyQzE0My43MiAxNS45OTk1IDE0My44OCAxNC44MDYyIDE0NC4yMDIgMTMuNzYyQzE0NC41NDMgMTIuNzE3OSAxNDUuMDA1IDExLjg0NDIgMTQ1LjU4NyAxMS4xNDFDMTQ2LjE2OSAxMC40MTY1IDE0Ni44NzIgOS44NzMwNiAxNDcuNjk1IDkuNTEwOEMxNDguNTE4IDkuMTQ4NTMgMTQ5LjQyMiA4Ljk2NzQgMTUwLjQwNiA4Ljk2NzRaTTE1MC40MDYgMjIuNjgwMUMxNTEuNDA5IDIyLjY4MDEgMTUyLjE1MiAyMi4yNTM5IDE1Mi42MzQgMjEuNDAxNUMxNTMuMTM2IDIwLjU0OTEgMTUzLjM4NyAxOS4xODUzIDE1My4zODcgMTcuMzEwMUMxNTMuMzg3IDE1LjQzNDggMTUzLjEzNiAxNC4wODE3IDE1Mi42MzQgMTMuMjUwNkMxNTIuMTUyIDEyLjM5ODIgMTUxLjQwOSAxMS45NzIgMTUwLjQwNiAxMS45NzJDMTQ5LjQwMiAxMS45NzIgMTQ4LjY0OSAxMi4zOTgyIDE0OC4xNDcgMTMuMjUwNkMxNDcuNjY1IDE0LjEwMyAxNDcuNDI0IDE1LjQ2NjggMTQ3LjQyNCAxNy4zNDJDMTQ3LjQyNCAxOS4yMTczIDE0Ny42NjUgMjAuNTgxMSAxNDguMTQ3IDIxLjQzMzVDMTQ4LjY0OSAyMi4yNjQ1IDE0OS40MDIgMjIuNjgwMSAxNTAuNDA2IDIyLjY4MDFaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTY2LjAwMyAyNS42ODQ3QzE2My41OTQgMjUuNjg0NyAxNjEuODA3IDI0Ljk3MDkgMTYwLjY0MiAyMy41NDMxQzE1OS40NzggMjIuMTE1NCAxNTguODk2IDIwLjA0ODQgMTU4Ljg5NiAxNy4zNDJDMTU4Ljg5NiAxNi4xMjc0IDE1OS4wMzYgMTUuMDA4NyAxNTkuMzE3IDEzLjk4NThDMTU5LjYxOCAxMi45NDE2IDE2MC4wNiAxMi4wNTczIDE2MC42NDIgMTEuMzMyOEMxNjEuMjQ1IDEwLjU4NjkgMTYxLjk3OCAxMC4wMTE2IDE2Mi44NDEgOS42MDY2OUMxNjMuNzA0IDkuMTgwNSAxNjQuNzA4IDguOTY3NCAxNjUuODUzIDguOTY3NEMxNjYuNzU2IDguOTY3NCAxNjcuNTI5IDkuMDQxOTkgMTY4LjE3MiA5LjE5MTE1QzE2OC44MTQgOS4zMTkwMSAxNjkuMzI2IDkuNTAwMTQgMTY5LjcwNyA5LjczNDU1VjEyLjk2MjlDMTY5LjM0NiAxMi43Mjg1IDE2OC44NTQgMTIuNTA0OCAxNjguMjMyIDEyLjI5MTdDMTY3LjYwOSAxMi4wNzg2IDE2Ni45NDcgMTEuOTcyIDE2Ni4yNDQgMTEuOTcyQzE2NS4wNTkgMTEuOTcyIDE2NC4xNTYgMTIuNDE5NSAxNjMuNTM0IDEzLjMxNDVDMTYyLjkxMSAxNC4xODgyIDE2Mi42IDE1LjQ5ODggMTYyLjYgMTcuMjQ2MkMxNjIuNiAxOC45MDgzIDE2Mi44ODEgMjAuMjI5NSAxNjMuNDQzIDIxLjIwOTdDMTY0LjAwNSAyMi4xOSAxNjQuOTI5IDIyLjY4MDEgMTY2LjIxNCAyMi42ODAxQzE2Ni45NzcgMjIuNjgwMSAxNjcuNjI5IDIyLjU4NDIgMTY4LjE3MiAyMi4zOTI0QzE2OC43MzQgMjIuMjAwNiAxNjkuMjQ2IDIxLjkzNDIgMTY5LjcwNyAyMS41OTMzVjI0LjY5MzhDMTY4Ljg0NCAyNS4zNTQ0IDE2Ny42MDkgMjUuNjg0NyAxNjYuMDAzIDI1LjY4NDdaIiBmaWxsPSJ3aGl0ZSIvPgo8cGF0aCBkPSJNMTc5LjAxMiAxMi4yOTE3VjI1LjM2NTFIMTc1LjQyOFYxMi4yOTE3SDE3MS4yMTJWOS4yODcwNUgxODMuMjI4VjEyLjI5MTdIMTc5LjAxMloiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0xOTMuMDkgMTguMDQ1M0gxOTIuNTc4QzE5MS4wMzIgMTguMDQ1MyAxODkuOTI4IDE4LjIzNyAxODkuMjY1IDE4LjYyMDZDMTg4LjYwMyAxOC45ODI5IDE4OC4yNzEgMTkuNjIyMiAxODguMjcxIDIwLjUzODVDMTg4LjI3MSAyMS4yMjA0IDE4OC40NTIgMjEuNzc0NCAxODguODEzIDIyLjIwMDZDMTg5LjE5NSAyMi42MDU1IDE4OS43NjcgMjIuODA3OSAxOTAuNTMgMjIuODA3OUMxOTEuMTczIDIyLjgwNzkgMTkxLjcwNSAyMi42OTA3IDE5Mi4xMjYgMjIuNDU2M0MxOTIuNTQ4IDIyLjIwMDYgMTkyLjg2OSAyMS44OTE2IDE5My4wOSAyMS41Mjk0VjE4LjA0NTNaTTE5Ni42NzQgMjEuNDMzNUMxOTYuNjc0IDIyLjc1NDcgMTk2LjczNCAyNC4wNjUyIDE5Ni44NTQgMjUuMzY1MUgxOTMuMzYxQzE5My4zMDEgMjUuMTk0NiAxOTMuMjQxIDI0Ljk5MjIgMTkzLjE4IDI0Ljc1NzhDMTkzLjE0IDI0LjUyMzQgMTkzLjExIDI0LjI5OTYgMTkzLjA5IDI0LjA4NjVIMTkyLjkzOUMxOTIuNTk4IDI0LjQ3MDEgMTkyLjE1NiAyNC44MjE3IDE5MS42MTQgMjUuMTQxM0MxOTEuMDcyIDI1LjQzOTcgMTkwLjI3OSAyNS41ODg4IDE4OS4yMzUgMjUuNTg4OEMxODcuODUgMjUuNTg4OCAxODYuNzI1IDI1LjE1MiAxODUuODYyIDI0LjI3ODNDMTg1LjAxOSAyMy40MDQ2IDE4NC41OTcgMjIuMTQ3MyAxODQuNTk3IDIwLjUwNjVDMTg0LjU5NyAxOC44NjU3IDE4NS4yMyAxNy41OTc4IDE4Ni40OTQgMTYuNzAyOEMxODcuNzU5IDE1Ljc4NjUgMTg5Ljc2NyAxNS4zMjgzIDE5Mi41MTggMTUuMzI4M0gxOTMuMDlWMTQuNDMzM0MxOTMuMDkgMTMuNTU5NiAxOTIuODg5IDEyLjk1MjMgMTkyLjQ4OCAxMi42MTEzQzE5Mi4wODYgMTIuMjQ5MSAxOTEuNDU0IDEyLjA2NzkgMTkwLjU5IDEyLjA2NzlDMTkwLjEyOCAxMi4wNjc5IDE4OS42NTcgMTIuMTIxMiAxODkuMTc1IDEyLjIyNzhDMTg4LjY5MyAxMi4zMTMgMTg4LjIzMSAxMi40MzAyIDE4Ny43ODkgMTIuNTc5NEMxODcuMzY4IDEyLjcyODUgMTg2Ljk2NiAxMi44OTkgMTg2LjU4NSAxMy4wOTA4QzE4Ni4yMjMgMTMuMjgyNiAxODUuOTIyIDEzLjQ3NDQgMTg1LjY4MSAxMy42NjYyVjEwLjUwMTdDMTg2LjIyMyAxMC4xNjA3IDE4Ni45NDYgOS44MzA0NCAxODcuODUgOS41MTA4QzE4OC43NTMgOS4xOTExNSAxODkuODA3IDkuMDMxMzMgMTkxLjAxMiA5LjAzMTMzQzE5Mi45MTkgOS4wMzEzMyAxOTQuMzM1IDkuNDM2MjEgMTk1LjI1OCAxMC4yNDZDMTk2LjIwMiAxMS4wNTU3IDE5Ni42NzQgMTIuNDQwOSAxOTYuNjc0IDE0LjQwMTNWMjEuNDMzNVoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0yMDUuODggOS4yODcwNUMyMDkuMjMzIDkuMjg3MDUgMjEwLjkwOSAxMC42NTA5IDIxMC45MDkgMTMuMzc4NUMyMTAuOTA5IDE0LjMzNzQgMjEwLjY2OCAxNS4xMjU5IDIxMC4xODYgMTUuNzQzOEMyMDkuNzI1IDE2LjM0MDUgMjA5LjA4MiAxNi43NjY3IDIwOC4yNTkgMTcuMDIyNEMyMDkuMjgzIDE3LjE5MjkgMjEwLjA3NiAxNy41ODcxIDIxMC42MzggMTguMjA1MUMyMTEuMiAxOC44MDE3IDIxMS40ODEgMTkuNjMyOCAyMTEuNDgxIDIwLjY5ODNDMjExLjQ4MSAyMi4yMzI2IDIxMC45OCAyMy4zOTQgMjA5Ljk3NiAyNC4xODI0QzIwOC45OTIgMjQuOTcwOSAyMDcuNjA2IDI1LjM2NTEgMjA1LjgyIDI1LjM2NTFIMTk5LjU1NVY5LjI4NzA1SDIwNS44OFpNMjAzLjA0OSAxOC41MjQ3VjIyLjU1MjJIMjA1LjUxOEMyMDYuMjQxIDIyLjU1MjIgMjA2LjgxMyAyMi4zOTI0IDIwNy4yMzUgMjIuMDcyOEMyMDcuNjU3IDIxLjczMTggMjA3Ljg2OCAyMS4xODg0IDIwNy44NjggMjAuNDQyNkMyMDcuODY4IDE5Ljc2MDcgMjA3LjY2NyAxOS4yNzA2IDIwNy4yNjUgMTguOTcyMkMyMDYuODY0IDE4LjY3MzkgMjA2LjI4MSAxOC41MjQ3IDIwNS41MTggMTguNTI0N0gyMDMuMDQ5Wk0yMDMuMDQ5IDEyLjA5OTlWMTUuNzQzOEgyMDUuMzM4QzIwNi4wMiAxNS43NDM4IDIwNi41NDIgMTUuNTg0IDIwNi45MDQgMTUuMjY0NEMyMDcuMjg1IDE0Ljk0NDcgMjA3LjQ3NiAxNC41MDc5IDIwNy40NzYgMTMuOTUzOEMyMDcuNDc2IDEyLjcxNzkgMjA2LjgwMyAxMi4wOTk5IDIwNS40NTggMTIuMDk5OUgyMDMuMDQ5WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTIxNy40NjIgMTcuNTk3OFYyNS4zNjUxSDIxMy44NzhWOS4yODcwNUgyMTcuNDYyVjE2LjgzMDZMMjIyLjUyMiA5LjI4NzA1SDIyNi4xMzZMMjIxLjA3NiAxNi44MzA2TDIyNi44MjggMjUuMzY1MUgyMjIuNzYzTDIxNy40NjIgMTcuNTk3OFoiIGZpbGw9IndoaXRlIi8+CjxwYXRoIGQ9Ik0yMzYuMjM1IDE4LjA0NTNIMjM1LjcyM0MyMzQuMTc3IDE4LjA0NTMgMjMzLjA3MyAxOC4yMzcgMjMyLjQxMSAxOC42MjA2QzIzMS43NDggMTguOTgyOSAyMzEuNDE3IDE5LjYyMjIgMjMxLjQxNyAyMC41Mzg1QzIzMS40MTcgMjEuMjIwNCAyMzEuNTk3IDIxLjc3NDQgMjMxLjk1OSAyMi4yMDA2QzIzMi4zNCAyMi42MDU1IDIzMi45MTMgMjIuODA3OSAyMzMuNjc2IDIyLjgwNzlDMjM0LjMxOCAyMi44MDc5IDIzNC44NSAyMi42OTA3IDIzNS4yNzIgMjIuNDU2M0MyMzUuNjkzIDIyLjIwMDYgMjM2LjAxNSAyMS44OTE2IDIzNi4yMzUgMjEuNTI5NFYxOC4wNDUzWk0yMzkuODE5IDIxLjQzMzVDMjM5LjgxOSAyMi43NTQ3IDIzOS44OCAyNC4wNjUyIDI0MCAyNS4zNjUxSDIzNi41MDZDMjM2LjQ0NiAyNS4xOTQ2IDIzNi4zODYgMjQuOTkyMiAyMzYuMzI2IDI0Ljc1NzhDMjM2LjI4NiAyNC41MjM0IDIzNi4yNTYgMjQuMjk5NiAyMzYuMjM1IDI0LjA4NjVIMjM2LjA4NUMyMzUuNzQ0IDI0LjQ3MDEgMjM1LjMwMiAyNC44MjE3IDIzNC43NiAyNS4xNDEzQzIzNC4yMTggMjUuNDM5NyAyMzMuNDI1IDI1LjU4ODggMjMyLjM4IDI1LjU4ODhDMjMwLjk5NSAyNS41ODg4IDIyOS44NzEgMjUuMTUyIDIyOS4wMDcgMjQuMjc4M0MyMjguMTY0IDIzLjQwNDYgMjI3Ljc0MyAyMi4xNDczIDIyNy43NDMgMjAuNTA2NUMyMjcuNzQzIDE4Ljg2NTcgMjI4LjM3NSAxNy41OTc4IDIyOS42NCAxNi43MDI4QzIzMC45MDUgMTUuNzg2NSAyMzIuOTEzIDE1LjMyODMgMjM1LjY2MyAxNS4zMjgzSDIzNi4yMzVWMTQuNDMzM0MyMzYuMjM1IDEzLjU1OTYgMjM2LjAzNSAxMi45NTIzIDIzNS42MzMgMTIuNjExM0MyMzUuMjMyIDEyLjI0OTEgMjM0LjU5OSAxMi4wNjc5IDIzMy43MzYgMTIuMDY3OUMyMzMuMjc0IDEyLjA2NzkgMjMyLjgwMiAxMi4xMjEyIDIzMi4zMiAxMi4yMjc4QzIzMS44MzggMTIuMzEzIDIzMS4zNzcgMTIuNDMwMiAyMzAuOTM1IDEyLjU3OTRDMjMwLjUxMyAxMi43Mjg1IDIzMC4xMTIgMTIuODk5IDIyOS43MyAxMy4wOTA4QzIyOS4zNjkgMTMuMjgyNiAyMjkuMDY4IDEzLjQ3NDQgMjI4LjgyNyAxMy42NjYyVjEwLjUwMTdDMjI5LjM2OSAxMC4xNjA3IDIzMC4wOTIgOS44MzA0NCAyMzAuOTk1IDkuNTEwOEMyMzEuODk5IDkuMTkxMTUgMjMyLjk1MyA5LjAzMTMzIDIzNC4xNTcgOS4wMzEzM0MyMzYuMDY1IDkuMDMxMzMgMjM3LjQ4IDkuNDM2MjEgMjM4LjQwNCAxMC4yNDZDMjM5LjM0NyAxMS4wNTU3IDIzOS44MTkgMTIuNDQwOSAyMzkuODE5IDE0LjQwMTNWMjEuNDMzNVoiIGZpbGw9IndoaXRlIi8+CjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF8yOV8zMjkpIj4KPHJlY3QgeD0iOTAuNjg4NiIgd2lkdGg9IjI4LjI1MTkiIGhlaWdodD0iMzAiIHJ4PSIxNC4xMjYiIGZpbGw9IiNFNkU2RTYiLz4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAxXzI5XzMyOSkiPgo8cGF0aCBkPSJNODkuNjk5OCA2LjY3NDk1TDEwMi4wNiAxLjk0OTk1TDExNC40MiA2LjY3NDk1VjIzLjQ3NUwxMDIuMDYgMjguMTk5OUw4OS42OTk4IDIzLjQ3NVY2LjY3NDk1WiIgZmlsbD0iI0ZGNzc1MSIvPgo8cGF0aCBkPSJNODkuNjk5OCA2LjY3NTA1TDEwMi4wNiAxMS40VjI4LjJMODkuNjk5OCAyMy40NzVWNi42NzUwNVoiIGZpbGw9IiNFMTMxMDAiLz4KPHBhdGggZD0iTTExNC40MiA2LjY3NTA1TDEwMi4wNiAxMS40VjI4LjJMMTE0LjQyIDIzLjQ3NVY2LjY3NTA1WiIgZmlsbD0iI0ZDNDcxNCIvPgo8cGF0aCBkPSJNMTEzLjA2IDIwLjQ2NDhDMTEwLjQwNiAyMy4xOTQ1IDEwNi4xNSAyNC43NTU5IDEwMy40MiAyNC4xOTE0VjIyLjcxMzlDMTA2LjA5NSAyMy4yOTM0IDExMC4zODcgMjEuODc4NCAxMTMuMDYgMTguOTg4M1YyMC40NjQ4Wk0xMDcuNTgzIDE2LjE1MzNMMTA2LjcwNyAxNi40OTMyVjIwLjQ1NDFMMTA0LjUxNSAyMS4zMDA4VjE3LjM0MDhMMTAzLjYzOCAxNy42Nzc3TDEwNS42MTEgMTEuOTYyOUwxMDcuNTgzIDE2LjE1MzNaTTExMi44NDEgMTQuMTIxMUwxMTEuOTY0IDE0LjQ2MDlWMTguNDIwOUwxMDkuNzc0IDE5LjI2NzZWMTUuMzA2NkwxMDguODk4IDE1LjY0NTVMMTEwLjg3IDkuOTMwNjZMMTEyLjg0MSAxNC4xMjExWiIgZmlsbD0id2hpdGUiLz4KPC9nPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzI5XzMyOSI+CjxyZWN0IHg9IjkwLjY4ODYiIHdpZHRoPSIyOC4yNTE5IiBoZWlnaHQ9IjMwIiByeD0iMTQuMTI2IiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8Y2xpcFBhdGggaWQ9ImNsaXAxXzI5XzMyOSI+CjxyZWN0IHdpZHRoPSIyNC43MjA0IiBoZWlnaHQ9IjI2LjI1IiBmaWxsPSJ3aGl0ZSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODkuNjk5OCAxLjk0OTk1KSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=" alt="Яндекс Доставка" style="height:20px;width:auto;vertical-align:middle"></span></label></div></div><p id="dres" style="margin-top:10px"></p></div></div></div></div>
 <section class="lxwrap" id="opisanie"><div class="wrap"><div class="lxhead"><span class="ex">Описание</span><h2>Hookii Neomow L</h2></div><div class="lx"><p class="lxbr">Hookii · робот-газонокосилка</p>
-<div class="lxst">
-<div>
-<span>до 2000 м²</span>
-<span>площадь, L Pro</span>
+<div class="lxstats">
+<div class="lxstat rv7">
+<span class="lxsn">до 2000 м²</span>
+<span class="lxsl">площадь, L Pro</span>
 </div>
-<div>
-<span>без провода</span>
-<span>и без RTK</span>
+<div class="lxstat rv7">
+<span class="lxsn">без провода</span>
+<span class="lxsl">и без RTK</span>
 </div>
-<div>
-<span>27°</span>
-<span>уклон (50%)</span>
+<div class="lxstat rv7">
+<span class="lxsn">27°</span>
+<span class="lxsl">уклон (50%)</span>
 </div>
-<div>
-<span>до 40</span>
-<span>зон на карте, L Pro</span>
+<div class="lxstat rv7">
+<span class="lxsn">до 40</span>
+<span class="lxsl">зон на карте, L Pro</span>
 </div>
 </div>
-<p class="lxess">3D LiDAR и AI-камера, без провода по периметру и без RTK-станции.</p>
-<ul class="eh-pdp-highlights">
-<li>Без периметрального провода и без RTK</li>
-<li>Участки до 800 / 1000 / 2000 м² — версии SE / L / L Pro</li>
-<li>360° 3D LiDAR + AI-камера: навигация и обход препятствий</li>
-<li>До 10 / 20 / 40 зон на одной карте</li>
-<li>Уклон до 27° (50%), задний привод</li>
+<p class="lxess rv7">3D LiDAR и AI-камера, без провода по периметру и без RTK-станции.</p>
+<ul class="lxhl7">
+<li class="rv7"><svg aria-hidden="true" class="lxi" viewbox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg><span>Без периметрального провода и без RTK</span></li>
+<li class="rv7"><svg aria-hidden="true" class="lxi" viewbox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg><span>Участки до <b class="lxn">800 </b>/ <b class="lxn">1000 </b>/ <b class="lxn">2000 м²</b> — версии SE / L / L Pro</span></li>
+<li class="rv7"><svg aria-hidden="true" class="lxi" viewbox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg><span><b class="lxn">360°</b> 3D LiDAR + AI-камера: навигация и обход препятствий</span></li>
+<li class="rv7"><svg aria-hidden="true" class="lxi" viewbox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg><span>До <b class="lxn">10 </b>/ <b class="lxn">20 </b>/ <b class="lxn">40 зон</b> на одной карте</span></li>
+<li class="rv7"><svg aria-hidden="true" class="lxi" viewbox="0 0 24 24"><path d="M5 12.5l4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4"></path></svg><span>Уклон до <b class="lxn">27°</b> (<b class="lxn">50%</b>), задний привод</span></li>
 </ul>
 <section class="lxs">
 <div>
 <div>
-<h2>Как выглядит на участке</h2>
+<h2 class="lxh2 rv7">Как выглядит на участке</h2>
 <p>Фото модели Neomow L.</p>
 </div>
-<div>
-<div>
-<img alt="" loading="lazy" src="media/live/6e548f_l-cap-lawn.webp.svg"/>
-</div>
-<div>
-<h3>Без провода по периметру</h3>
+<div class="lxcards">
+<article class="lxcard rv7"><figure class="lxcm"><div>
+<figure class="lxfig rv7"><img alt="" loading="lazy" src="media/live/6e548f_l-cap-lawn.webp.svg"/></figure>
+</div></figure><div class="lxcb">
+<h3 class="lxct">Без провода по периметру</h3>
 <p>Периметральный провод не закапываете, RTK-станцию не ставите.</p>
-</div>
-<div>
-<img alt="" loading="lazy" src="media/live/a0ca3b_l-cap-check.webp.svg"/>
-</div>
-<div>
-<h3>Диск с пятью лезвиями</h3>
+</div></article>
+<article class="lxcard rv7 alt"><figure class="lxcm"><div>
+<figure class="lxfig rv7"><img alt="" loading="lazy" src="media/live/a0ca3b_l-cap-check.webp.svg"/></figure>
+</div></figure><div class="lxcb">
+<h3 class="lxct">Диск с пятью лезвиями</h3>
 <p>Запасные лезвия идут в комплекте с аксессуарами.</p>
+</div></article>
+<article class="lxcard rv7"><figure class="lxcm"><div>
+<figure class="lxfig rv7"><img alt="" loading="lazy" src="media/live/eda346_l-cap-owner.webp.svg"/></figure>
+</div></figure><div class="lxcb">
+<h3 class="lxct">Три версии под площадь участка</h3>
+<p>SE — до <b class="lxn">800 м²</b>, L — до <b class="lxn">1000 м²</b>, L Pro — до <b class="lxn">2000 м²</b>. Подберём под ваш участок.</p>
+</div></article>
+<article class="lxcard rv7 alt"><figure class="lxcm"><div>
+<figure class="lxfig rv7"><img alt="" loading="lazy" src="media/live/9a8eda_l-cap-wheel.webp.svg"/></figure>
+</div></figure><div class="lxcb">
+<h3 class="lxct">Колёса с протектором, задний привод</h3>
+<p>Уклон до <b class="lxn">27°</b> (<b class="lxn">50%</b>), для стабильной работы лучше до <b class="lxn">17°</b> (<b class="lxn">31%</b>).</p>
+</div></article>
 </div>
 <div>
-<img alt="" loading="lazy" src="media/live/eda346_l-cap-owner.webp.svg"/>
+<h2 class="lxh2 rv7">Коротко в цифрах</h2>
+<div class="lxstats">
+<div class="lxstat rv7">
+<span class="lxsn">360°</span>
+<span class="lxsl">3D LiDAR вокруг робота</span>
 </div>
-<div>
-<h3>Три версии под площадь участка</h3>
-<p>SE — до 800 м², L — до 1000 м², L Pro — до 2000 м². Подберём под ваш участок.</p>
+<div class="lxstat rv7">
+<span class="lxsn">без провода</span>
+<span class="lxsl">и без RTK-станции</span>
 </div>
-<div>
-<img alt="" loading="lazy" src="media/live/9a8eda_l-cap-wheel.webp.svg"/>
+<div class="lxstat rv7">
+<span class="lxsn">до 2000 м²</span>
+<span class="lxsl">L Pro (L — до 1000, SE — до 800)</span>
 </div>
-<div>
-<h3>Колёса с протектором, задний привод</h3>
-<p>Уклон до 27° (50%), для стабильной работы лучше до 17° (31%).</p>
+<div class="lxstat rv7">
+<span class="lxsn">27° (50%)</span>
+<span class="lxsl">максимальный уклон</span>
 </div>
-</div>
-<div>
-<h2>Коротко в цифрах</h2>
-<div class="lxg">
-<div class="lxc">
-<span>360°</span>
-<span>3D LiDAR вокруг робота</span>
-</div>
-<div class="lxc">
-<span>без провода</span>
-<span>и без RTK-станции</span>
-</div>
-<div class="lxc">
-<span>до 2000 м²</span>
-<span>L Pro (L — до 1000, SE — до 800)</span>
-</div>
-<div class="lxc">
-<span>27° (50%)</span>
-<span>максимальный уклон</span>
-</div>
-<div class="lxc">
-<span>22 см</span>
-<span>ширина кошения</span>
+<div class="lxstat rv7">
+<span class="lxsn">22 см</span>
+<span class="lxsl">ширина кошения</span>
 </div>
 </div>
 </div>
@@ -108,37 +104,34 @@
 </section>
 <section class="lxs">
 <div>
-<div class="lxc">
-<div>
-<img alt="3D LiDAR и AI-камера работают вместе" loading="lazy" src="media/live/56cc03_l-nav.webp.svg"/>
-</div>
-<div>
-<h2>3D LiDAR и AI-камера работают вместе</h2>
-<p>LiDAR даёт роботу объём участка на 360°, камера распознаёт газон и его границы.</p>
+<div class="lxcards">
+<article class="lxcard rv7"><figure class="lxcm"><div>
+<figure class="lxfig rv7"><img alt="3D LiDAR и AI-камера работают вместе" loading="lazy" src="media/live/56cc03_l-nav.webp.svg"/></figure>
+</div></figure><div class="lxcb">
+<h3 class="lxct">3D LiDAR и AI-камера работают вместе</h3>
+<p>LiDAR даёт роботу объём участка на <b class="lxn">360°</b>, камера распознаёт газон и его границы.</p>
 <p>Провод по периметру не закапываете, RTK-станцию не ставите. Зарядную станцию можно поставить в помещении или на улице.</p>
-</div>
-</div>
-</div>
-<div>
-<div class="lxc">
-<div>
-<img alt="Компактный корпус" loading="lazy" src="media/live/d6870f_l-compact.webp.svg"/>
-</div>
-<div>
-<h2>Компактный корпус</h2>
-<p>640×446×315 мм, 13,8–14,2 кг. Проходы между зонами — от 65 см. Уклон до 27° (50%), для стабильной работы лучше до 17° (31%).</p>
-</div>
+</div></article>
 </div>
 </div>
 <div>
-<div class="lxc">
-<div>
-<img alt="Модули: сборщик листьев и триммер кромки" loading="lazy" src="media/live/bcf746_l-modules.webp.svg"/>
+<div class="lxcards">
+<article class="lxcard rv7 alt"><figure class="lxcm"><div>
+<figure class="lxfig rv7"><img alt="Компактный корпус" loading="lazy" src="media/live/d6870f_l-compact.webp.svg"/></figure>
+</div></figure><div class="lxcb">
+<h3 class="lxct">Компактный корпус</h3>
+<p><b class="lxn">640</b>×<b class="lxn">446</b>×<b class="lxn">315 мм</b>, <b class="lxn">13,8–14,2 кг</b>. Проходы между зонами — от <b class="lxn">65 см</b>. Уклон до <b class="lxn">27°</b> (<b class="lxn">50%</b>), для стабильной работы лучше до <b class="lxn">17°</b> (<b class="lxn">31%</b>).</p>
+</div></article>
+</div>
 </div>
 <div>
-<h2>Модули: сборщик листьев и триммер кромки</h2>
+<div class="lxcards">
+<article class="lxcard rv7"><figure class="lxcm"><div>
+<figure class="lxfig rv7"><img alt="Модули: сборщик листьев и триммер кромки" loading="lazy" src="media/live/bcf746_l-modules.webp.svg"/></figure>
+</div></figure><div class="lxcb">
+<h3 class="lxct">Модули: сборщик листьев и триммер кромки</h3>
 <p>У серии L есть точки крепления и подключение для навесных модулей. Подходят на всю серию L (SE, L, L Pro). Триммер кромки ожидаем в декабре, по сборщику листьев сроки уточняем.</p>
-</div>
+</div></article>
 </div>
 </div>
 </section>
@@ -252,31 +245,27 @@
 <div>
 <p>Всё необходимое для запуска — в одной поставке.</p>
 </div>
-<div class="lxg">
-<div class="lxc">
-<img alt="" loading="lazy" src="media/live/c191b4_robot.webp.svg"/>
-</div>
-<p>
+<div class="lxcards lxtiles">
+<article class="lxcard rv7 t"><figure class="lxcm"><div class="lxc">
+<figure class="lxfig rv7"><img alt="" loading="lazy" src="media/live/c191b4_robot.webp.svg"/></figure>
+</div></figure><div class="lxcb"><h3 class="lxct">
 							Робот-газонокосилка Neomow L							<span>×1</span>
-</p>
-<div class="lxc">
-<img alt="" loading="lazy" src="media/live/a172f4_guide-short.webp.svg"/>
-</div>
-<p>
+</h3></div></article>
+<article class="lxcard rv7 t"><figure class="lxcm"><div class="lxc">
+<figure class="lxfig rv7"><img alt="" loading="lazy" src="media/live/a172f4_guide-short.webp.svg"/></figure>
+</div></figure><div class="lxcb"><h3 class="lxct">
 							Краткое руководство							<span>×1</span>
-</p>
-<div class="lxc">
-<img alt="" loading="lazy" src="media/live/1535ca_guide-full.webp.svg"/>
-</div>
-<p>
+</h3></div></article>
+<article class="lxcard rv7 t"><figure class="lxcm"><div class="lxc">
+<figure class="lxfig rv7"><img alt="" loading="lazy" src="media/live/1535ca_guide-full.webp.svg"/></figure>
+</div></figure><div class="lxcb"><h3 class="lxct">
 							Руководство пользователя							<span>×1</span>
-</p>
-<div class="lxc">
-<img alt="" loading="lazy" src="media/live/979abf_accessories.webp.svg"/>
-</div>
-<p>
+</h3></div></article>
+<article class="lxcard rv7 t"><figure class="lxcm"><div class="lxc">
+<figure class="lxfig rv7"><img alt="" loading="lazy" src="media/live/979abf_accessories.webp.svg"/></figure>
+</div></figure><div class="lxcb"><h3 class="lxct">
 							Аксессуары: колышки, адаптер питания, винты, запасные лезвия							<span>×1</span>
-</p>
+</h3></div></article>
 </div>
 </div>
 </div></details></section>
@@ -390,11 +379,11 @@
 <div>
 <div>
 <div>
-<h2>Похожие роботы</h2>
+<h2 class="lxh2 rv7">Похожие роботы</h2>
 </div>
 <div>
 <section class="lxs">
-<h2>Похожие</h2>
+<h2 class="lxh2 rv7">Похожие</h2>
 <ul>
 <li>
 <a href="https://www.electro-hub.ru/product/yarbo-core/" rel="noopener" target="_blank">
@@ -402,7 +391,7 @@
 </a>
 <div>
 <p>Газон · без провода</p>
-<h2>
+<h2 class="lxh2 rv7">
 <a href="https://www.electro-hub.ru/product/yarbo-core/" rel="noopener" target="_blank">Yarbo Core</a>
 </h2>
 <p>До 2 500 м² · без провода</p>
@@ -418,7 +407,7 @@
 </a>
 <div>
 <p>3D LiDAR, AI-Camera</p>
-<h2>
+<h2 class="lxh2 rv7">
 <a href="https://www.electro-hub.ru/product/hookii-neomow-x2-se/" rel="noopener" target="_blank">Hookii Neomow X2 SE</a>
 </h2>
 <p>3D LiDAR, AI-Camera</p>
@@ -434,7 +423,7 @@
 </a>
 <div>
 <p>Газон · без провода</p>
-<h2>
+<h2 class="lxh2 rv7">
 <a href="https://www.electro-hub.ru/product/hookii-neomow-x2/" rel="noopener" target="_blank">Hookii Neomow X2</a>
 </h2>
 <p>До 6 000 м² · LiDAR + AI-Vision</p>
@@ -452,7 +441,7 @@
 <section class="lxs">
 <div>
 <div>
-<h2>Частые вопросы</h2>
+<h2 class="lxh2 rv7">Частые вопросы</h2>
 </div>
 <div>
 <details>
