@@ -1027,3 +1027,7 @@ section.light .sh p{color:#b8bcc4!important}
 a[href="kb-yarbo-ili-snegouborshchik.html"] .im{background-image:url(media/r29/cmp-snow.webp.svg)!important}
 a[href="kb-sravnenie-hookii-lymow-yarbo.html"] .im{background-image:url(media/r29/cmp-brands.webp.svg)!important}
 a[href="kb-navigaciya-lidar-vslam.html"] .im{background-image:url(media/r29/cmp-nav.webp.svg)!important}
+.nbx-p{font-variant-numeric:tabular-nums;letter-spacing:-.02em;min-width:0;overflow:hidden;text-overflow:clip}
+@media(max-width:420px){.nbx-l{gap:6px}.nbx-l img{width:36px;height:36px}.nbx-p{font-size:clamp(12px,3.55vw,15px)}}
+.nbx-l{flex:1 0 auto}.nbx-p{overflow:visible}
+.nbx-r{flex:0 1 auto;min-width:0;overflow:hidden}.nbx-r>span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
