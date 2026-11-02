@@ -989,7 +989,7 @@ body.w .hrob.ow{display:none!important}
 body.w .hscr{background:linear-gradient(90deg,rgba(8,21,33,.94) 0%,rgba(8,21,33,.8) 36%,rgba(8,21,33,.25) 62%,rgba(8,21,33,0) 80%),linear-gradient(0deg,#081521 0%,transparent 30%)!important}
 @media(max-width:860px){body.w .hero .bg.i-hero_winter{background-size:auto 56%;background-repeat:no-repeat;background-position:60% 0}
 body.w .hscr{background:linear-gradient(180deg,rgba(8,21,33,0) 0%,rgba(8,21,33,0) 30%,rgba(8,21,33,.75) 46%,#081521 56%,#081521 100%)!important}}
-body.w section,body.w footer{background-color:transparent}
+body.w section:not(.light):not(.paper),body.w footer{background-color:transparent}
 body.w::before{content:"";position:fixed;inset:0;z-index:2;pointer-events:none;background-image:radial-gradient(2px 2px at 20px 30px,#fff,transparent),radial-gradient(1.5px 1.5px at 80px 120px,#fff,transparent),radial-gradient(2.5px 2.5px at 150px 60px,rgba(255,255,255,.9),transparent),radial-gradient(1.5px 1.5px at 210px 170px,#fff,transparent),radial-gradient(2px 2px at 260px 20px,rgba(255,255,255,.8),transparent);background-size:300px 220px;opacity:.55;animation:r27sn 14s linear infinite}
 @keyframes r27sn{from{background-position:0 0}to{background-position:60px 220px}}
 @media(prefers-reduced-motion:reduce){body.w::before{animation:none}}
@@ -997,3 +997,29 @@ body.r27f::after{content:"";position:fixed;inset:0;z-index:300;pointer-events:no
 @keyframes r27fl{from{opacity:.45}to{opacity:0}}
 body.w .btn.red,body.w .nbx a:last-child,body.w .nbx .buy,body.w .add,body.w button.red{background:#2E8FE0!important;border-color:#2E8FE0!important}
 body.w .demo{background:#1f6fb8!important}
+/* r28 season contact button */
+.nb .nbo{background:radial-gradient(circle at 35% 30%,#ffe9a8 0%,#ffc23d 38%,#f59a0b 72%,#e07b00 100%)!important;color:#3a2200!important;box-shadow:0 6px 20px rgba(245,154,11,.45),0 0 0 5px rgba(11,11,12,.85)!important;isolation:isolate;overflow:visible}
+@media(min-width:861px){.nb .nbo{position:relative!important}}
+.nb .nbo svg{position:relative;z-index:2}
+.nb .nbo::before{content:"";position:absolute;inset:-9px;border-radius:50%;z-index:-1;pointer-events:none;background:repeating-conic-gradient(from 0deg,rgba(255,200,70,.55) 0deg 4deg,transparent 4deg 30deg);-webkit-mask:radial-gradient(circle,transparent 58%,#000 60%,#000 72%,transparent 74%);mask:radial-gradient(circle,transparent 58%,#000 60%,#000 72%,transparent 74%);animation:r28rot 24s linear infinite;will-change:transform}
+.nb .nbo::after{content:"";position:absolute;inset:-4px;border-radius:50%;z-index:-2;pointer-events:none;background:radial-gradient(circle,rgba(255,190,60,.55),rgba(255,190,60,0) 70%);animation:r28pulse 3.6s ease-in-out infinite;will-change:transform,opacity}
+@keyframes r28rot{to{transform:rotate(360deg)}}
+@keyframes r28pulse{0%,100%{transform:scale(.92);opacity:.55}50%{transform:scale(1.22);opacity:1}}
+body.w .nb .nbo{background:radial-gradient(circle at 35% 30%,#ffffff 0%,#d9f1ff 30%,#7cc8f5 70%,#3b95d6 100%)!important;color:#0b2a44!important;box-shadow:0 6px 20px rgba(80,170,240,.45),0 0 0 5px rgba(8,21,33,.85)!important}
+body.w .nb .nbo::before{inset:-10px;background:none;-webkit-mask:none;mask:none;content:"❄";color:rgba(220,242,255,.95);font-size:13px;line-height:1;display:block;width:auto;height:auto;inset:auto;top:-6px;right:-6px;text-shadow:0 0 6px rgba(160,220,255,.9);animation:r28tw 3.4s ease-in-out infinite}
+body.w .nb .nbo::after{background:radial-gradient(circle,rgba(150,215,255,.55),rgba(150,215,255,0) 70%);animation:r28pulse 4s ease-in-out infinite}
+@keyframes r28tw{0%,100%{transform:rotate(0) scale(.85);opacity:.55}50%{transform:rotate(60deg) scale(1.1);opacity:1}}
+@media(prefers-reduced-motion:reduce){.nb .nbo::before,.nb .nbo::after{animation:none!important}}
+
+/* r28 card images */
+a[href="kb-yarbo-ili-snegouborshchik.html"] .im{background-image:url(media/live/6120a6_snow-night.jpg.svg)!important;background-size:cover!important;background-position:center!important}
+a[href="kb-podgotovka-k-snegu.html"] .im{background-image:url(media/live/33ddd6_snow-why.webp.svg)!important;background-size:cover!important;background-position:center!important}
+a[href="kb-navigaciya-lidar-vslam.html"] .im{background-image:url(media/live/15f9ed_lidar.webp.svg)!important;background-size:cover!important;background-position:center!important}
+a[href="kb-datchiki-bezopasnost.html"] .im{background-image:url(media/live/45bdfe_obstacles.webp.svg)!important;background-size:cover!important;background-position:center!important}
+a[href="kb-kak-vybrat-robota.html"] .im{background-image:url(media/live/2b0700_mower-people.jpg.svg)!important;background-size:cover!important;background-position:center!important}
+a[href="kb-uhod-za-gazonom.html"] .im{background-image:url(media/live/4091a6_mower-cut.jpg.svg)!important;background-size:cover!important;background-position:center!important}
+a[href="kb-sravnenie-hookii-lymow-yarbo.html"] .im{background-image:url(media/live/458f5a_mower-grass.jpg.svg)!important;background-size:cover!important;background-position:center!important}
+@media(min-width:861px){.nb .nbo{top:auto!important;left:auto!important;margin:0 auto!important}}
+section.light .sh h2,section.light .sh h2 em{color:#fff!important}section.light .sh h2 em{color:var(--red)!important}
+section.light .sh p{color:#b8bcc4!important}
+.kc h3{color:#fff!important}.kc .bd p{color:#b8bcc4!important}
