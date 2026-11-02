@@ -48,7 +48,7 @@ var VC={};window.V=function(k,d){fetch(d).then(function(r){return r.blob()}).the
 window.loadV=function(k,cb){if(VC[k]&&typeof VC[k]==='string'){cb(VC[k]);return}(VC['_'+k]=VC['_'+k]||[]).push(cb);if(!VC['s'+k]){VC['s'+k]=1;var s=document.createElement('script');s.src='v/'+k+'.js';document.body.appendChild(s)}};
 $$('video[data-v]').forEach(function(v){loadV(v.dataset.v,function(u){v.src=u})});
 /* delivery */
-var dc=$('#dcity');if(dc){function d(){var o=dc.options[dc.selectedIndex],w=+($('#dw')&&$('#dw').value||1);$('#dres').innerHTML='<b>'+o.dataset.c+' ₽</b> · '+o.dataset.d+' <span class="ex">пример тарифа</span>'}dc.onchange=d;d()}
+var dc=$('#dcity');if(dc){function d(){var o=dc.options[dc.selectedIndex],w=+($('#dw')&&$('#dw').value||1);var c=document.querySelector('input[name=carr]:checked'),base=+String(o.dataset.c).replace(/\s/g,''),k=c&&base?+c.dataset.x:1,v=Math.round(base*k/100)*100,tn=c?c.parentNode.querySelector('span').title:'';$('#dres').innerHTML=(v?'<b>'+v.toLocaleString('ru-RU')+' ₽</b>':'<b>бесплатно</b>')+' · '+o.dataset.d+(c&&base?' · '+tn:'')+' <span class="ex">пример тарифа</span>'}dc.onchange=d;document.addEventListener('change',function(e){if(e.target.name==='carr')d()});d()}
 /* card check */
 var cc=$('#cardf');if(cc)cc.onsubmit=function(e){e.preventDefault();var v=$('#cardn').value.trim(),L={'090':['Бронза','2 года','скидка на расходники'],'007':['Серебро','2 года','зимнее хранение по клубной цене'],'042':['Золото','3 года','предложение на следующего робота'],'888':['Золото','3 года','новинки первыми']}[v];
  $('#cardr').innerHTML=L?'<div class="card" style="margin-top:16px"><span class="tag">Карта № '+v+'</span><h3 style="margin-top:10px">Уровень: '+L[0]+'</h3><p>Гарантия: '+L[1]+' · Открыто: '+L[2]+'</p></div>':'<p class="mut" style="margin-top:12px">Карта не найдена. Тестовые: 090 · 007 · 042 · 888</p>'};
@@ -61,14 +61,14 @@ var qz=$('#quiz');if(qz){var ans={},steps=$$('.qs',qz),i=0;function show(){steps
 /* forms demo */
 $$('form.demo-f').forEach(function(f){f.onsubmit=function(e){e.preventDefault();f.innerHTML='<p style="padding:20px 0"><b>Заявка принята (демо).</b> На боевом сайте она уйдёт менеджеру.</p>'}});
 /* map */
-if($('#map')&&window.L){var m=L.map('map').setView([55.75,37.0],16);
- var sat=L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',{maxZoom:19,attribution:'Esri World Imagery'}).addTo(m);
- var osm=L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap'});
+if($('#map')&&window.L){var m=L.map('map',{crs:L.CRS.EPSG3395,attributionControl:false}).setView([55.75,37.0],16);
+ L.control.attribution({prefix:false}).addAttribution('© Яндекс').addTo(m);var sat=L.tileLayer('https://core-sat.maps.yandex.net/tiles?l=sat&x={x}&y={y}&z={z}&lang=ru_RU',{maxZoom:19}).addTo(m);
+ var osm=L.tileLayer('https://core-renderer-tiles.maps.yandex.net/tiles?l=map&x={x}&y={y}&z={z}&lang=ru_RU',{maxZoom:19});
  L.control.layers({'Спутник':sat,'Схема':osm}).addTo(m);
  var pts=[],poly=null,mk=[];function area(){if(pts.length<3)return 0;var R=6378137,a=0;for(var i=0;i<pts.length;i++){var p1=pts[i],p2=pts[(i+1)%pts.length];a+=(p2.lng-p1.lng)*Math.PI/180*(2+Math.sin(p1.lat*Math.PI/180)+Math.sin(p2.lat*Math.PI/180))}return Math.abs(a*R*R/2)}
  function draw(){if(poly)m.removeLayer(poly);poly=L.polygon(pts,{color:'#C41E3A',weight:3,fillOpacity:.25}).addTo(m);var a=Math.round(area());$('#marea').textContent=a?a.toLocaleString('ru-RU')+' м² · '+(a/100).toFixed(1)+' сот.':'—';
   var rec=a===0?'Поставьте минимум 3 точки':a<600?'RoboUP Raccoon 2SE':a<2500?'Hookii Neomow X2 / L':a<4000?'Lymow One Plus или Yarbo M1 Pro':'Yarbo — свяжемся для выезда';$('#mrec').textContent=rec}
  m.on('click',function(e){pts.push(e.latlng);mk.push(L.circleMarker(e.latlng,{radius:5,color:'#fff',fillColor:'#C41E3A',fillOpacity:1}).addTo(m));draw()});
  $('#mclr').onclick=function(){pts=[];mk.forEach(function(x){m.removeLayer(x)});mk=[];draw()};
- $('#mfind').onclick=function(){var q=$('#maddr').value;if(!q)return;fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&q='+encodeURIComponent(q)).then(function(r){return r.json()}).then(function(j){if(j[0])m.setView([+j[0].lat,+j[0].lon],18);else toast('Адрес не найден')}).catch(function(){toast('Поиск недоступен')})};}
+ $('#mfind').onclick=function(){var q=$('#maddr').value;if(!q)return;fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=ru&accept-language=ru&q='+encodeURIComponent(q)).then(function(r){return r.json()}).then(function(j){if(j[0])m.setView([+j[0].lat,+j[0].lon],18);else toast('Адрес не найден')}).catch(function(){toast('Поиск недоступен')})};}
 })();
