@@ -91,3 +91,5 @@ body:not(.w) .yw,body.w .ys{display:none!important}
 .ybl{margin:28px 0}.yblg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}.yblg img{width:100%;height:auto;border-radius:14px;display:block}
 @media(max-width:860px){.yblg{grid-template-columns:1fr 1fr}.yblg img:first-child{grid-column:1/-1}}
 .ytrim{width:50%;right:-14%;bottom:0}
+.ytrim{width:56%;right:-10%;bottom:-34%}@media(min-width:861px){.ytrim{width:40%;right:-30%;bottom:-6%}}
+.ytrim{bottom:-40%;right:-8%}
