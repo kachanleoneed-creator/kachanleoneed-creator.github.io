@@ -1,0 +1,12 @@
+(function(){var d=document,$=function(s){return d.querySelector(s)},rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var sr=$('#zsr');if(sr){var sl=$('#zsnowl'),cl=$('#zclr'),bt=$('#zbot'),p=$('#zp'),L=cl.getTotalLength();cl.style.strokeDasharray=L;cl.style.strokeDashoffset=L;
+ var pt=function(t){var q=p.getPointAtLength(t*L);bt.setAttribute('transform','translate('+q.x+','+q.y+')')};pt(0);
+ sr.oninput=function(){sl.setAttribute('opacity',sr.value/100*.95);$('#zsv').textContent=sr.value+'%';cl.style.strokeDashoffset=L;pt(0)};sr.oninput();
+ $('#zrun').onclick=function(){if(rm){cl.style.strokeDashoffset=0;pt(1);return}var t0=null;function f(ts){t0=t0||ts;var k=Math.min((ts-t0)/4500,1);cl.style.strokeDashoffset=L*(1-k);pt(k);if(k<1)requestAnimationFrame(f)}requestAnimationFrame(f)}}
+var cm=$('#zcm');if(cm){var cc=function(){var h=(+cm.value||0)*(+$('#zcn').value||0)/60;$('#zch').textContent=!h?'— ч':h.toLocaleString('ru-RU',{maximumFractionDigits:1})+' ч'};cm.oninput=cc;$('#zcn').oninput=cc;cc()}
+var ma=$('#marea');if(ma){new MutationObserver(function(){var ok=ma.textContent.trim()!=='—';$('#zres').hidden=!ok;$('#zmh').hidden=ok}).observe(ma,{childList:true,characterData:true,subtree:true})}
+var qz=d.querySelectorAll('.zq');if(qz.length){var A={};qz.forEach(function(q){q.querySelectorAll('button').forEach(function(b){b.onclick=function(){q.querySelectorAll('button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');A[q.dataset.k]=+b.dataset.v;
+ if(Object.keys(A).length===qz.length){var r=$('#zqr'),c=A.slope===2||A.cov===2,h=c?'Нужна консультация':'Yarbo вам подходит',t=c?(A.slope===2?'Крутой уклон: Yarbo держит уклон до 21° — нужно посмотреть участок.':'Без дорожек и заезда задачу лучше обсудить с консультантом.'):'Дорожки и '+(A.park===0?'парковка':'заезд')+' — как раз задача Yarbo. '+(A.home===1?'Приезжаете на дачу — заезд уже чист.':'Утром — чистые дорожки.')+' Проверим RTK-сигнал на месте.';
+ r.innerHTML='<span class="z-k">Результат</span><h3>'+h+'</h3><p>'+t+'</p><div class="zres-b"><a class="btn red b9" href="https://t.me/ElectroHUB_consult_bot" target="_blank" rel="noopener">Консультация в Telegram</a><a class="btn ghost b9" href="#zmap">Проверить участок</a></div>';r.hidden=false}}})})}
+var sg=d.querySelectorAll('.zseg button');sg.forEach(function(b){b.onclick=function(){sg.forEach(function(x){x.classList.toggle('on',x===b)});d.querySelectorAll('.zcmp [data-c]').forEach(function(e){if(e.tagName!=='BUTTON')e.classList.toggle('y',e.dataset.c===b.dataset.c)})}});
+})();
