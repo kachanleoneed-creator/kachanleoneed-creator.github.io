@@ -802,3 +802,24 @@ body:not(.w) .hero .wrap{padding-top:calc(62.5vw - 6px)}
 .vans h2{font-size:clamp(28px,4vw,44px);margin:12px 0}
 .zdemo .vanf{margin-top:20px}
 @media(max-width:760px){.vanw{grid-template-columns:1fr;gap:22px}.vans{padding:44px 0}.vanf{border-radius:18px;padding:5px}.vanf video{border-radius:13px}}
+/* r24 premium footer */
+.foot{background:#0B0B0C!important;border-top:1px solid rgba(255,255,255,.08)}
+.foot .ftop{display:grid!important;grid-template-columns:1.3fr 2.7fr;gap:64px;padding:72px 0 56px}
+.foot .fcols{display:grid!important;grid-template-columns:1fr 1.15fr 1fr 1.25fr;gap:40px}
+.foot .fcols>div{background:none!important;border:0!important;box-shadow:none!important;padding:0!important;border-radius:0!important;display:flex;flex-direction:column;gap:12px}
+.foot h4{font-size:11px!important;font-weight:500!important;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.45)!important;margin:0 0 10px!important}
+.foot .fcols a{color:rgba(255,255,255,.78);font-size:14px;text-decoration:none;transition:color .2s}
+.foot .fcols a:hover{color:#fff}
+.foot .fcols .bi{display:none}
+.foot .fbig{font-size:18px!important;font-weight:600;color:#fff!important;white-space:nowrap}
+.foot .mut{font-size:12.5px;color:rgba(255,255,255,.45);line-height:1.5}
+.foot .fmsg{display:none!important}
+.fsoc{display:flex;gap:12px;margin-top:26px}
+.fsoc a{width:40px;height:40px;border-radius:50%;overflow:hidden;display:block;opacity:.9;transition:opacity .2s,transform .2s}
+.fsoc a:hover{opacity:1;transform:translateY(-2px)}
+.fsoc .bi{width:40px;height:40px;display:block;border-radius:50%}
+.foot .fpay,.foot .flegal{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;font-size:12px;color:rgba(255,255,255,.45);border-top:1px solid rgba(255,255,255,.08);padding:20px 0}
+.foot .flegal a{color:rgba(255,255,255,.55)}
+.fpm b{display:inline-block;font-weight:600;font-size:10.5px;letter-spacing:.04em;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.18);border-radius:5px;padding:3px 8px;margin:0 2px}
+.foot .fdemo{font-size:11px;color:rgba(255,255,255,.3);padding-bottom:28px}
+@media(max-width:900px){.foot .ftop{grid-template-columns:1fr;gap:40px;padding:48px 0 36px}.foot .fcols{grid-template-columns:1fr 1fr;gap:32px 20px}.foot .fpay,.foot .flegal{flex-direction:column;align-items:flex-start;gap:10px}}
