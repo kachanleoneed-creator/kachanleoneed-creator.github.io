@@ -2,11 +2,11 @@
 var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
 var fmt=function(n){return n.toLocaleString('ru-RU')+' ₽'};
 /* season */
-function setS(s){document.body.classList.toggle('w',s==='w');try{localStorage.setItem('ehs',s)}catch(e){}
+function setS(s,u){document.body.classList.toggle('w',s==='w');if(u){document.body.classList.remove('r27f');void document.body.offsetWidth;document.body.classList.add('r27f');setTimeout(function(){document.body.classList.remove('r27f')},700);}try{localStorage.setItem('ehs',s)}catch(e){}
  $$('a[href="p-yarbo-snow-blower.html"],a[href="zima-snow-blower.html"]').forEach(function(a){if(!a.dataset.oh)a.dataset.oh=a.getAttribute('href');a.setAttribute('href',s==='w'?'zima-snow-blower.html':a.dataset.oh)});$$('a[href="check.html"],a[href="zima.html#zmap"]').forEach(function(a){if(!a.dataset.oc)a.dataset.oc=a.getAttribute('href');a.setAttribute('href',s==='w'?'zima.html#zmap':a.dataset.oc)});if(window.applyF)applyF();}
 window.ehSeason=setS;(function(){var pg=location.pathname.split('/').pop(),ws=(localStorage.getItem('ehs')||new URLSearchParams(location.search).get('s'))==='w';if(ws&&pg==='p-yarbo-snow-blower.html')location.replace('zima-snow-blower.html');if(ws&&pg==='check.html')location.replace('zima.html#zmap');})();setS(localStorage.getItem('ehs')||(new URLSearchParams(location.search).get('s'))||'s');
-$$('.season .bs').forEach(function(b){b.onclick=function(){setS('s')}});
-$$('.season .bw').forEach(function(b){b.onclick=function(){setS('w')}});
+$$('.season .bs').forEach(function(b){b.onclick=function(){setS('s',1)}});
+$$('.season .bw').forEach(function(b){b.onclick=function(){setS('w',1)}});
 /* menu */
 var bg=$('.burger');if(bg)bg.onclick=function(e){e.preventDefault();window.ehMenu&&window.ehMenu()};
 /* toast */
