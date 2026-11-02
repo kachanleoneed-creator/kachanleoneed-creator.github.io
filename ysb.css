@@ -86,3 +86,8 @@ body:not(.w) .yw,body.w .ys{display:none!important}
 .nbx .ybd2{position:absolute;left:58px;top:-2px;font:500 10.5px Inter,sans-serif;color:#bbb;white-space:nowrap}
 .ych.ycb{border-color:rgba(255,255,255,.18);padding:0 12px;cursor:default;color:#ddd}
 @media(min-width:861px){.ysb .ycap{top:96px!important;bottom:auto!important;left:6vw;max-width:520px}.ysb .yh{font-size:44px}}
+.ytrim .ytrs{filter:none}.ytrim.ghost{opacity:.6;filter:drop-shadow(0 0 10px rgba(255,216,74,.95)) drop-shadow(0 0 22px rgba(255,140,60,.6)) brightness(1.15)}
+.ytrim{width:36%;right:-8%;bottom:2%}
+.ybl{margin:28px 0}.yblg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}.yblg img{width:100%;height:auto;border-radius:14px;display:block}
+@media(max-width:860px){.yblg{grid-template-columns:1fr 1fr}.yblg img:first-child{grid-column:1/-1}}
+.ytrim{width:50%;right:-14%;bottom:0}
