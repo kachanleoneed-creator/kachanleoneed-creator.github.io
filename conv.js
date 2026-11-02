@@ -4,7 +4,10 @@ document.addEventListener('click',function(e){var b=e.target.closest('[data-add2
 // sticky buy bar
 var sb=$('.sbar');if(sb){var main=$('button.main'),pp=$('#pprice');$('.sbar .btn.red').onclick=function(){main.click()};
  var sync=function(){$('.sbar b').textContent=pp.textContent};sync();new MutationObserver(sync).observe(pp,{childList:true,characterData:true,subtree:true});
- new IntersectionObserver(function(en){sb.classList.toggle('on',!en[0].isIntersecting)}).observe(main)}
+ var sl=(location.pathname.match(/p-([a-z0-9-]+)\.html/)||[])[1];var im=sl?{getAttribute:function(){return 'media/'+sl+'.svg'}}:null;
+ var w=$('.sbar .wrap');if(im){var t=document.createElement('img');t.className='sbt';t.alt='';t.src=im.getAttribute('src');w.insertBefore(t,w.firstChild)}
+ var bb=$('.sbar .btn.red');bb.innerHTML='<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2 3h3l2.6 12.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.5L22 7H6"/></svg><span>В корзину</span>';
+ new IntersectionObserver(function(en){var on=!en[0].isIntersecting;sb.classList.toggle('on',on);document.body.classList.toggle('sbon',on)}).observe(main)}
 // media tabs
 $$('.mtabs button').forEach(function(t){t.onclick=function(){$$('.mtabs button').forEach(function(x){x.classList.remove('on')});t.classList.add('on');var th=$$('.thumbs button')[+t.dataset.t];if(th)th.click();var c=$('.gcap');if(c)c.textContent=t.dataset.c}});
 // delivery: where to
