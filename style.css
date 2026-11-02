@@ -427,3 +427,34 @@ details.fq:not(.lxacc) .fqi{padding-left:46px}
 .trust span::before{content:''!important;flex:0 0 22px;width:22px;height:22px;border-radius:50%;background:rgba(196,30,58,.2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4L18 8' fill='none' stroke='%23ff5a73' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat!important;margin:0!important;color:transparent!important}
 @media(max-width:600px){.trust{grid-template-columns:1fr 1fr}}
 .pmb{background:var(--g-bg)!important;border:1px solid var(--g-bd)!important;border-radius:18px!important;transition:border-color .3s,box-shadow .3s}.pmc input:checked+.pmb{border-color:var(--g-red)!important;box-shadow:0 0 0 1px var(--g-red),0 0 26px rgba(196,30,58,.22)!important}
+/* r8 header + menu */
+.demo{position:relative;font-size:10.5px!important;font-weight:500!important;letter-spacing:.02em!important;padding:4px 30px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;background:linear-gradient(90deg,#8e1529,#C41E3A,#8e1529)!important;line-height:1.3}
+.demo-x{position:absolute;right:6px;top:50%;transform:translateY(-50%);background:none;border:0;color:#fff;font-size:16px;line-height:1;cursor:pointer;opacity:.8;padding:2px 6px}
+.hdr{background:rgba(11,11,12,.62)!important;transition:background .3s}
+.hdr .wrap{transition:height .3s}
+.hdr.sm{background:rgba(11,11,12,.82)!important}.hdr.sm .wrap{height:56px}
+.hdr .ic{position:relative}
+.hdr .b.cnt{position:absolute;top:-3px;right:-3px;min-width:18px;height:18px;padding:0 5px;border-radius:9px;background:#C41E3A;color:#fff;font:700 10px/18px Inter,sans-serif;text-align:center;box-shadow:0 0 0 2px #0b0b0c}
+.burger svg path{transition:transform .35s,opacity .25s;transform-origin:12px 12px}
+.burger svg{stroke:currentColor}
+.burger.x svg path{d:path("M5 5L19 19M5 19L19 5")}
+.burger{z-index:202}
+.mnu{position:fixed;inset:0;z-index:200;background:rgba(8,8,10,.72);-webkit-backdrop-filter:blur(22px) saturate(1.3);backdrop-filter:blur(22px) saturate(1.3);opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.mnu{background:rgba(8,8,10,.97)}}
+.mnu.on{opacity:1;visibility:visible}
+.mnu-in{max-width:640px;margin:0 auto;min-height:100%;display:flex;flex-direction:column;padding:84px 22px 26px;box-sizing:border-box}
+.mnu-l{display:flex;flex-direction:column;gap:4px}
+.mnu-l a{display:flex;align-items:center;justify-content:space-between;padding:13px 16px;border-radius:16px;color:#fff;text-decoration:none;font:800 24px/1.2 Montserrat,sans-serif;letter-spacing:-.01em;opacity:0;transform:translateY(16px);transition:opacity .45s,transform .45s cubic-bezier(.2,.7,.2,1),background .2s;transition-delay:calc(var(--i)*40ms + 60ms)}
+.mnu.on .mnu-l a{opacity:1;transform:none}
+.mnu-l a i{font-style:normal;color:#666;font-size:18px;transition:transform .2s,color .2s}
+.mnu-l a:hover,.mnu-l a:active{background:rgba(255,255,255,.06)}.mnu-l a:hover i{transform:translateX(4px);color:#fff}
+.mnu-l a.on{background:rgba(196,30,58,.16);box-shadow:inset 3px 0 0 #C41E3A}.mnu-l a.on i{color:#ff5a73}
+.mnu-b{margin-top:auto;padding-top:24px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid rgba(255,255,255,.1);opacity:0;transition:opacity .5s .45s}
+.mnu.on .mnu-b{opacity:1}
+.mnu-ph{color:#fff;font:700 17px/1.2 Montserrat,sans-serif;text-decoration:none;display:flex;flex-direction:column}.mnu-ph small{font:400 12px Inter,sans-serif;color:#999;margin-top:3px}
+.mnu-s{display:flex;gap:10px}.mnu-s a{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)}.mnu-s svg{width:24px;height:24px}
+html.mnu-lock,html.mnu-lock body{overflow:hidden!important;touch-action:none}
+html.mnu-lock .hdr{z-index:201;background:transparent!important;border-color:transparent}
+@media(prefers-reduced-motion:reduce){.mnu,.mnu-l a,.mnu-b{transition:none!important}}
+@media(max-width:600px){.hdr .wrap{height:60px;gap:10px!important}.hdr.sm .wrap{height:52px}.hdr .hr{gap:8px!important;margin-left:auto}.hdr .ic{width:40px;height:40px}.hdr .season{flex:none}}
+html.mnu-lock #eh-cw,html.mnu-lock .bat2top,html.mnu-lock [class*="emilia"],html.mnu-lock [id*="emilia"]{visibility:hidden!important;opacity:0!important}
