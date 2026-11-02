@@ -755,3 +755,10 @@ body{padding-bottom:calc(76px + env(safe-area-inset-bottom))!important}
 
 }
 @media(max-width:380px){.nbs-l a.nbt{min-height:44px;padding:7px 10px;font-size:13px}.nbs-k a,.nbs-k button{height:40px}}
+
+/* r19 charge colour */
+.nb:after,.nbx:after{background:var(--pc,#C41E3A);box-shadow:0 0 8px var(--pc,#C41E3A),0 0 2px var(--pc,#C41E3A)}
+.nbh .nbb i{background:var(--pc,#C41E3A);box-shadow:0 0 6px var(--pc,#C41E3A)}
+@keyframes pgfp{0%{filter:brightness(1)}40%{filter:brightness(1.8) drop-shadow(0 0 6px var(--pc))}100%{filter:brightness(1)}}
+.pgf .nb:after,.pgf .nbx:after,.pgf .nbh .nbb{animation:pgfp .9s ease-out 1}
+@media (prefers-reduced-motion:reduce){.pgf .nb:after,.pgf .nbx:after,.pgf .nbh .nbb{animation:none}}
