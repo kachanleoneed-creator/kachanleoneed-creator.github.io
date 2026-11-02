@@ -33,3 +33,4 @@ var co=$('#cof');if(co){var ship=2500,pay='rf';function tot(){var c=[];try{c=JSO
  $('#cotg').onclick=mb('https://t.me/ElectroHUB_consult_bot');$('#comx').onclick=mb('https://max.ru/id770500837792_2_bot')}
 })();
 (function(){var o=window.addCart;if(!o)return;window.addCart=function(it){o(it);if(!/cart\.html/.test(location.pathname)){var d=document.querySelector('.drawer'),s=document.querySelector('.shade');if(d){d.classList.add('on');s.classList.add('on')}}}})();
+;(function(){var e=document.querySelectorAll('.rv7');if(!e.length)return;if(!('IntersectionObserver'in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){e.forEach(function(x){x.classList.add('in')});return}var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});e.forEach(function(x){io.observe(x)})})();
