@@ -269,3 +269,4 @@ section>.wrap{flex:1 1 100%;width:100%;min-width:0}
 .bt-up{margin-top:3px;color:#fff;font:700 12px/1 Inter,sans-serif;background:#C41E3A;border-radius:99px;padding:3px 7px}
 .bat2top:hover .bt-body{border-color:#fff}
 @media(max-width:600px){.bat2top{left:12px;bottom:14px}.bt-body{width:32px;height:48px}}
+@media(max-width:600px){.eh-cw{right:6px!important;bottom:64px!important;transform:scale(.82);transform-origin:100% 100%}.emv-fab{right:6px!important;bottom:14px!important;transform:scale(.82);transform-origin:100% 100%}.pc .cartb{width:calc(100% - 34px)}}
