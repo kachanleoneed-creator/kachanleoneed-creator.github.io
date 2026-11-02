@@ -977,3 +977,6 @@ body.dk-on .nb .nbi{animation:dkin .6s cubic-bezier(.2,1.3,.3,1) both}
 body.w .dkg i{background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.6),rgba(70,130,180,.92) 45%,rgba(12,32,52,.96))}
 @media(min-width:861px){.dkg{display:block}body.dk-on .nb{transition-delay:.42s!important}}
 @media(prefers-reduced-motion:reduce){.dkg{display:none!important}body.dk-on .nb{transition-delay:0s!important}}
+
+/* r26 */
+@media(min-width:861px){.hero .sw.season{display:none!important}}
