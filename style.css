@@ -186,7 +186,7 @@ input[type=range]{width:100%;accent-color:#C41E3A;margin:18px 0 6px}.mlbl{displa
 body:not(.w) .light .bc{color:#666}
 .foot .ftop{display:grid;grid-template-columns:1.1fr 2fr;gap:50px}.fcols{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}.fcols>div{display:flex;flex-direction:column;gap:9px}.fcols h4{margin-bottom:6px}.fcols a{display:flex;gap:8px;align-items:center}.fcols .fbig{font-weight:800;font-size:17px;color:#fff}.fcols .mut{font-size:12px}
 .fmsg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:20px}.fmsg a{display:flex;align-items:center;gap:10px;border:1px solid #2a2a2a;border-radius:12px;padding:9px 12px;font-size:13px;transition:.25s}.fmsg a:hover{border-color:#fff;transform:translateY(-2px)}.fmsg .bi{width:26px;height:26px}
-.fpay,.flegal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;border-top:1px solid #222;margin-top:34px;padding-top:18px;font-size:13px;color:#999}.flegal{margin-top:0}.fdemo{font-size:11px;color:#666;margin-top:14px}
+.fpay,.flegal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;border-top:0;margin-top:28px;padding-top:8px;font-size:13px;color:#999}.flegal{margin-top:12px}.fdemo{font-size:11px;color:#666;margin-top:14px}
 @media(max-width:1000px){.foot .ftop{grid-template-columns:1fr}.fcols{grid-template-columns:1fr 1fr}}@media(max-width:520px){.fcols,.fmsg{grid-template-columns:1fr}}
 .bhero{padding:70px 0 30px;position:relative;overflow:hidden}.bhero .lead{max-width:760px}
 .bhero.one{min-height:520px;display:flex;align-items:flex-end;padding:80px 0 50px}.bhero.one .wrap{position:relative;z-index:2}
@@ -818,7 +818,7 @@ body:not(.w) .hero .wrap{padding-top:calc(62.5vw - 6px)}
 .fsoc a{width:40px;height:40px;border-radius:50%;overflow:hidden;display:block;opacity:.9;transition:opacity .2s,transform .2s}
 .fsoc a:hover{opacity:1;transform:translateY(-2px)}
 .fsoc .bi{width:40px;height:40px;display:block;border-radius:50%}
-.foot .fpay,.foot .flegal{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;font-size:12px;color:rgba(255,255,255,.45);border-top:1px solid rgba(255,255,255,.08);padding:20px 0}
+.foot .fpay,.foot .flegal{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;font-size:12px;color:rgba(255,255,255,.45);border-top:0;padding:12px 0;margin-top:8px}
 .foot .flegal a{color:rgba(255,255,255,.55)}
 .fpm b{display:inline-block;font-weight:600;font-size:10.5px;letter-spacing:.04em;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.18);border-radius:5px;padding:3px 8px;margin:0 2px}
 .foot .fdemo{font-size:11px;color:rgba(255,255,255,.3);padding-bottom:28px}
@@ -1031,3 +1031,28 @@ a[href="kb-navigaciya-lidar-vslam.html"] .im{background-image:url(media/r29/cmp-
 @media(max-width:420px){.nbx-l{gap:6px}.nbx-l img{width:36px;height:36px}.nbx-p{font-size:clamp(12px,3.55vw,15px)}}
 .nbx-l{flex:1 0 auto}.nbx-p{overflow:visible}
 .nbx-r{flex:0 1 auto;min-width:0;overflow:hidden}.nbx-r>span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+
+/* catalog robots face right (LTR) */
+.pc .im.face-l{transform:scaleX(-1)}
+.pc .im.face-l .st{transform:scaleX(-1)}
+
+/* calc time — readable on light cards */
+.grid2.calc .card{color:#141416;background:#fff}
+.grid2.calc label.f{color:#3a3a42;font-size:14px;font-weight:600}
+.grid2.calc label.f b{color:#C41E3A;font-size:18px;font-weight:800;font-variant-numeric:tabular-nums}
+.grid2.calc .mut{color:#5c5c63!important}
+.grid2.calc .hres{color:#0B0B0C}
+.grid2.calc .lead{color:#333!important}
+.grid2.calc .card.big .mut{color:#5c5c63;font-size:14px;font-weight:600;letter-spacing:.02em;text-transform:uppercase}
+.grid2.calc input[type=range]{accent-color:#C41E3A;height:28px;margin:10px 0 18px}
+.grid2.calc input[type=range]::-webkit-slider-runnable-track{height:6px;border-radius:999px;background:linear-gradient(90deg,#e8e6e2,#d6d4d0)}
+.grid2.calc input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#C41E3A;border:3px solid #fff;box-shadow:0 2px 8px rgba(196,30,58,.35);margin-top:-8px}
+.light .grid2.calc .sh p{color:#5c5c63}
+
+.tile.live-tg,.tile.live-ph{color:#fff;text-decoration:none}
+.tile.live-ph{background:linear-gradient(145deg,#1a1a1f,#2a1520)}
+.live-ph-bg{position:absolute;inset:0;background:radial-gradient(circle at 30% 30%,rgba(196,30,58,.35),transparent 55%),url(data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Ctext x='20' y='70' font-size='48'%3E📲%3C/text%3E%3C/svg%3E) 70% 40%/80px no-repeat;opacity:.9;pointer-events:none}
+.liveplots .sh a{text-decoration:underline;text-underline-offset:3px}
+.journey .card h3{color:#fff}.light .journey .card h3{color:inherit}
+
