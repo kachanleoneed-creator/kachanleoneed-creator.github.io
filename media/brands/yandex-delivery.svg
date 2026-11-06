@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="89.5 0 30 30" fill="none">
+<!-- Official Yandex Delivery mark, cropped from the logo on dostavka.yandex.ru (YD_Logo_Full). Paths unchanged. -->
+<g clip-path="url(#ydc)">
+<rect x="90.6886" width="28.2519" height="30" rx="14.126" fill="#E6E6E6"/>
+<g clip-path="url(#ydb)">
+<path d="M89.6998 6.67495L102.06 1.94995L114.42 6.67495V23.475L102.06 28.1999L89.6998 23.475V6.67495Z" fill="#FF7751"/>
+<path d="M89.6998 6.67505L102.06 11.4V28.2L89.6998 23.475V6.67505Z" fill="#E13100"/>
+<path d="M114.42 6.67505L102.06 11.4V28.2L114.42 23.475V6.67505Z" fill="#FC4714"/>
+<path d="M113.06 20.4648C110.406 23.1945 106.15 24.7559 103.42 24.1914V22.7139C106.095 23.2934 110.387 21.8784 113.06 18.9883V20.4648ZM107.583 16.1533L106.707 16.4932V20.4541L104.515 21.3008V17.3408L103.638 17.6777L105.611 11.9629L107.583 16.1533ZM112.841 14.1211L111.964 14.4609V18.4209L109.774 19.2676V15.3066L108.898 15.6455L110.87 9.93066L112.841 14.1211Z" fill="white"/>
+</g>
+</g>
+<defs>
+<clipPath id="ydc"><rect x="90.6886" width="28.2519" height="30" rx="14.126" fill="white"/></clipPath>
+<clipPath id="ydb"><rect width="24.7204" height="26.25" fill="white" transform="translate(89.6998 1.94995)"/></clipPath>
+</defs>
+</svg>
