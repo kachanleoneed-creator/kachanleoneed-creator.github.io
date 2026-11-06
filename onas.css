@@ -14,8 +14,12 @@
 .onas-fact a{color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.35);text-underline-offset:3px}
 .onas-fact small{display:block;margin-top:8px;color:#d0d0d6;font-size:15px}
 .onas-founder{display:grid;grid-template-columns:minmax(260px,420px) minmax(0,1fr);gap:56px;align-items:center}
-.onas-portrait{margin:0;min-width:0}
-.onas-portrait img{width:100%;height:auto;display:block;border-radius:28px;border:1px solid rgba(255,255,255,.12);background:#111}
+.onas-portrait{position:relative;margin:0;min-width:0}
+.onas-portrait img,.onas-portrait video{width:100%;height:auto;aspect-ratio:1;object-fit:cover;display:block;border-radius:28px;border:1px solid rgba(255,255,255,.12);background:#111}
+.onas-portrait video{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity .45s ease}
+.onas-portrait.is-play video{opacity:1}
+.onas-portrait.is-done video{opacity:0}
+@media(prefers-reduced-motion:reduce){.onas-portrait video{display:none!important}.onas-portrait video{transition:none}}
 .onas-role{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#ff5a73;font-weight:700;margin-bottom:10px}
 .onas-founder h2{margin-bottom:6px}
 .onas-brand{color:#c8c8d0;font-weight:600;margin-bottom:18px}

@@ -1,5 +1,6 @@
 (function(){
 var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+$$('.st').forEach(function(el){var t=(el.textContent||'').replace(/\s+/g,' ').trim();if(t.indexOf('В наличии')===0&&!/нет/i.test(t))el.classList.add('st-in')});
 var fmt=function(n){return n.toLocaleString('ru-RU')+' ₽'};
 /* season */
 function setS(s,u){document.body.classList.toggle('w',s==='w');if(u){document.body.classList.remove('r27f');void document.body.offsetWidth;document.body.classList.add('r27f');setTimeout(function(){document.body.classList.remove('r27f')},700);}try{localStorage.setItem('ehs',s)}catch(e){}
