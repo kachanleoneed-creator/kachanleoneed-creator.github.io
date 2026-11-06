@@ -1,3 +1,4 @@
+/* deploy-bust 2026-11-06T10:40 MSK — no scroll anim, desktop Mac */
 /* Yarbo family PDP — cinematic, mobile-first, Electro HUB */
 .yf{--red:#C41E3A;--ink:#0b0b0c;--paper:#f4f1ea;--muted:#6b6b70;--line:rgba(255,255,255,.12);color:#1a1a1a;}
 .yf *{box-sizing:border-box}
@@ -98,4 +99,46 @@ body .sbar{display:none!important}
 @media(max-width:860px){
   .yf-hero{min-height:78svh}
   .yf-cta .yf-btn{flex:1 1 46%;min-width:140px}
+}
+
+/* kill site-wide scroll reveal / parallax leftovers on Yarbo family pages */
+body .rv, body .rv7, body .pzs, body .pzin {
+  opacity: 1 !important;
+  transform: none !important;
+  transition: none !important;
+  animation: none !important;
+}
+body .elines, body .zfz { display: none !important; }
+
+/* desktop / Mac: cinematic spacing and type, not a stretched mobile column */
+@media (min-width: 1100px) {
+  .yf-wrap { width: min(1280px, calc(100% - 88px)); }
+  .yf-hero { min-height: 92vh; }
+  .yf-hero .yf-wrap { padding: 64px 0 80px; }
+  .yf-kicker { font-size: 13px; margin-bottom: 16px; }
+  .yf-hero h1 { font-size: clamp(64px, 6.2vw, 96px); line-height: .92; max-width: 14ch; margin-bottom: 18px; }
+  .yf-lead { font-size: 22px; line-height: 1.5; max-width: 36em; margin-bottom: 28px; }
+  .yf-price { font-size: 48px; }
+  .yf-cta { gap: 14px; margin-top: 24px; }
+  .yf-btn { min-height: 52px; padding: 0 26px; font-size: 16px; border-radius: 16px; }
+  .yf-stats { gap: 18px; margin-top: 40px; }
+  .yf-stat { padding: 22px 20px; border-radius: 18px; }
+  .yf-stat b { font-size: 36px; }
+  .yf-sec { padding: 112px 0; }
+  .yf-sec h2 { font-size: clamp(42px, 3.8vw, 58px); margin-bottom: 16px; }
+  .yf-sec .yf-sub { font-size: 19px; margin-bottom: 40px; }
+  .yf-trio { gap: 24px; }
+  .yf-card { min-height: 440px; border-radius: 26px; }
+  .yf-card .in { padding: 32px; }
+  .yf-card h3 { font-size: 34px; }
+  .yf-band { gap: 64px; margin-bottom: 72px; }
+  .yf-band-media { min-height: 380px; border-radius: 26px; }
+  .yf-band h3 { font-size: 36px; margin-bottom: 14px; }
+  .yf-band p { font-size: 18px; }
+  .yf-specs { font-size: 16px; }
+  .yf-specs th { font-size: 22px; padding: 28px 0 14px; }
+  .yf-specs td { padding: 16px 0; }
+  .yf-faq summary { font-size: 19px; padding: 20px 36px 20px 0; }
+  .yf-stick .yf-btn { min-height: 50px; padding: 0 22px; font-size: 15px; }
+  .yf-stick .nm b { font-size: 18px; }
 }
