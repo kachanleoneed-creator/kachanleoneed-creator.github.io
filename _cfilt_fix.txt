@@ -1,1 +1,1 @@
-cfilt-r27f 2026-11-06 force-rebuild 17:58 MSK
+cfilt-r27f retrigger 2026-11-06 18:04 MSK
