@@ -43,24 +43,26 @@ assert.strictEqual(svc.hours, 'Пн–Сб 10:00–19:00');
 assert.strictEqual(svc.osmWay, 217668276);
 assert.ok(hav(here, svc.nominatim.map(Number)) < 5, 'nominatim and centroid diverged');
 
-assert.ok(svc.roads.length >= 5);
-let bent = 0;
-svc.roads.forEach(function (road) {
-  assert.ok(road.pts.length >= 2, road.id);
-  assert.ok(road.osm, road.id);
-  const start = hav(road.pts[0], here);
-  const end = hav(road.pts[road.pts.length - 1], here);
-  assert.ok(end < start, road.id + ' should travel toward the service, ' + start + ' -> ' + end);
-  road.pts.forEach(function (p, i) {
-    assert.ok(hav(p, here) < 1200, road.id + ' point far from the building');
-    if (i) assert.notDeepStrictEqual(p, road.pts[i - 1]);
-  });
-  if (road.pts.length >= 3 && crossTrack(road.pts) > 12) bent += 1;
-});
-assert.ok(bent >= 2, 'expected bent real-road polylines, got ' + bent);
-const access = svc.roads.find(function (r) { return r.id === 'svc'; });
-const accessEnd = hav(access.pts[access.pts.length - 1], here);
-assert.ok(accessEnd < 40 && accessEnd > 8, 'access road should stop beside the building, not on a ray into it: ' + accessEnd);
+assert.strictEqual(svc.zoomNear, 16);
+assert.strictEqual(svc.zoomFar, 12);
+assert.strictEqual(svc.city.name, 'Москва-Сити');
+const city = [+svc.city.lat, +svc.city.lon];
+const cityDist = hav(here, city);
+assert.ok(cityDist > 1500 && cityDist < 3500, 'Moscow-City distance ' + cityDist);
+const mpp = 156543.03392 * Math.cos(here[0] * Math.PI / 180) / Math.pow(2, svc.zoomFar);
+assert.ok(150 * mpp > cityDist, 'zoom 12 keeps Moscow-City inside a 300px-tall map');
+assert.ok(!js.includes('L.polyline'), 'road trails must not be drawn');
+assert.ok(!/eh-impulse|eh-road-base|eh-flow/.test(js + css));
+assert.ok(js.includes('dragging: false'));
+assert.ok(js.includes('touchZoom: false'));
+assert.ok(js.includes('doubleClickZoom: false'));
+assert.ok(js.includes('scrollWheelZoom: false'));
+assert.ok(js.includes('boxZoom: false'));
+assert.ok(js.includes('keyboard: false'));
+assert.ok(js.includes('zoomControl: false'));
+assert.ok(js.includes('flyTo'));
+assert.ok(css.includes('touch-action:pan-y'));
+assert.ok(css.includes('pointer-events:none'));
 
 assert.strictEqual(svc.links.twogis, 'https://2gis.ru/moscow/directions/points/%7C37.53463488%2C55.76850345');
 assert.strictEqual(svc.links.delivery, 'https://3.redirect.appmetrica.yandex.com/route?end-lat=55.76850345&end-lon=37.53463488&tariffClass=express&lang=ru&ref=electrohub&appmetrica_tracking_id=25395763362139037');
@@ -96,10 +98,21 @@ assert.ok(html.includes('leaflet.js'));
 assert.ok(js.includes("querySelector('img.logo')"));
 assert.ok(!/invented|placeholder-logo|secret shop/i.test(js));
 assert.ok(css.includes('prefers-reduced-motion'));
-assert.ok(css.includes('.eh-loc.is-off .eh-impulse'));
 assert.ok(css.includes('animation-play-state:paused'));
-assert.ok(css.includes('@keyframes eh-flow'));
 assert.ok(css.includes('@keyframes eh-pulse'));
+assert.ok(!html.includes('Свечение на улицах'));
+assert.ok(!html.includes('eh-note'));
+assert.ok(html.includes('media/brands/2gis.png'));
+assert.ok(html.includes('media/brands/yandex-delivery.svg'));
+assert.ok(html.includes('media/brands/yandex-go.png'));
+assert.ok(html.includes('id="eh-map-pause"'));
+assert.ok(js.includes('Москва-Сити') || html.includes('Москва-Сити') || js.includes("city.name"));
+['Esri', 'HERE', 'Garmin', 'FAO', 'NOAA', 'USGS', 'OpenStreetMap'].forEach(function (credit) {
+  assert.ok(js.includes(credit), 'missing attribution credit ' + credit);
+});
+assert.ok(fs.existsSync(path.join(root, 'media/brands/2gis.png')));
+assert.ok(fs.existsSync(path.join(root, 'media/brands/yandex-go.png')));
+assert.ok(fs.existsSync(path.join(root, 'media/brands/yandex-delivery.svg')));
 assert.ok(js.includes('World_Dark_Gray_Base'));
 assert.ok(!js.includes('cartocdn.com'), 'CARTO tiles require an API key and watermark the map');
 assert.ok(!/[?&](api[_-]?key|apikey|token)=/i.test(js));
@@ -115,4 +128,4 @@ loc.replace(/<\/?div\b[^>]*>/g, function (tag) {
 assert.strictEqual(depth, 0, 'location block divs are unbalanced: ' + depth);
 
 console.log('svc-loc tests passed');
-console.log('access end m', accessEnd.toFixed(1), 'bent roads', bent);
+console.log('moscow-city m', cityDist.toFixed(0));
