@@ -659,3 +659,35 @@ body.yf-page .sbar { display: none !important; }
 
 /* sticky dual CTA */
 .yf-stick .yf-btn.ghost { border-color: rgba(255,255,255,.28); }
+
+
+/* —— Demo visit (van + setup) —— */
+.yf-demo-grid {
+  display: grid; gap: 16px; margin: 8px 0 18px;
+}
+@media (min-width: 900px) {
+  .yf-demo-grid { grid-template-columns: 1.15fr 0.85fr; gap: 20px; align-items: stretch; }
+}
+.yf-demo-card {
+  margin: 0; border-radius: 22px; overflow: hidden; background: #0b0b0c;
+  border: 1px solid rgba(0,0,0,.06); box-shadow: 0 18px 50px rgba(0,0,0,.12);
+  display: flex; flex-direction: column; min-height: 0;
+}
+.yf-demo-card video {
+  display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #000;
+}
+.yf-demo-card.tall video { aspect-ratio: 9/14; max-height: 560px; margin: 0 auto; object-fit: contain; background: #000; }
+@media (min-width: 900px) {
+  .yf-demo-card.tall video { max-height: none; height: 100%; aspect-ratio: auto; min-height: 420px; }
+}
+.yf-demo-card figcaption {
+  padding: 14px 16px 16px; background: #fff;
+  display: flex; flex-direction: column; gap: 4px;
+}
+.yf-sec.dark .yf-demo-card figcaption, .yf-sec.ink .yf-demo-card figcaption { background: #161618; }
+.yf-demo-card figcaption b {
+  font: 800 15px/1.25 Montserrat, sans-serif; letter-spacing: -0.02em;
+}
+.yf-demo-card figcaption span {
+  font: 400 13px/1.4 Inter, sans-serif; color: var(--muted);
+}
