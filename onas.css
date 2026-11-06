@@ -1,0 +1,69 @@
+.onas-sec{padding:18px 0 72px}
+.onas-story{display:grid;grid-template-columns:minmax(200px,.62fr) minmax(0,1.45fr);gap:72px;align-items:start}
+.onas-story h2,.onas-why-head h2,.onas-req h2,.onas-founder h2{font-size:44px;letter-spacing:-.03em}
+.onas-prose p{font-size:18px;line-height:1.7;color:#e4e4e8;margin:0 0 18px;max-width:68ch}
+.onas-prose p:last-child{margin-bottom:0}
+.onas-split{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.onas-panel{background:var(--ink2);border:1px solid var(--line);border-radius:18px;padding:28px 28px 24px;min-width:0}
+.onas-panel h3{font-size:22px;margin-bottom:12px}
+.onas-panel p{color:#d5d5dc;font-size:16px;line-height:1.6}
+.onas-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.onas-fact{background:#121216;border:1px solid var(--line);border-radius:18px;padding:22px 22px 20px;min-width:0}
+.onas-fact span{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#c8c8d0;font-weight:700;margin-bottom:10px}
+.onas-fact strong,.onas-fact a{display:block;font-size:18px;line-height:1.45;font-weight:600;overflow-wrap:anywhere}
+.onas-fact a{color:#fff;text-decoration:underline;text-decoration-color:rgba(255,255,255,.35);text-underline-offset:3px}
+.onas-fact small{display:block;margin-top:8px;color:#d0d0d6;font-size:15px}
+.onas-founder{display:grid;grid-template-columns:minmax(260px,420px) minmax(0,1fr);gap:56px;align-items:center}
+.onas-portrait{margin:0;min-width:0}
+.onas-portrait img{width:100%;height:auto;display:block;border-radius:28px;border:1px solid rgba(255,255,255,.12);background:#111}
+.onas-role{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#ff5a73;font-weight:700;margin-bottom:10px}
+.onas-founder h2{margin-bottom:6px}
+.onas-brand{color:#c8c8d0;font-weight:600;margin-bottom:18px}
+.onas-founder blockquote{margin:0;padding:4px 0 4px 22px;border-left:3px solid var(--red)}
+.onas-founder blockquote p{font-family:Montserrat,sans-serif;font-weight:700;font-size:26px;line-height:1.35;letter-spacing:-.02em}
+.onas-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.onas-actions .btn{text-decoration:none}
+.onas-why-head{margin-bottom:28px;max-width:16em}
+.onas-why{list-style:none;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}
+.onas-why li{grid-column:span 2;background:var(--ink2);border:1px solid var(--line);border-radius:18px;padding:22px 20px 20px;min-width:0}
+.onas-why li:nth-child(4),.onas-why li:nth-child(5){grid-column:span 3}
+.onas-num{display:block;font-family:Montserrat,sans-serif;font-weight:800;color:var(--red);letter-spacing:.08em;margin-bottom:12px}
+.onas-why h3{font-size:20px;margin-bottom:10px;line-height:1.25}
+.onas-why p{color:#d5d5dc;font-size:15px;line-height:1.55}
+.onas-req{background:linear-gradient(180deg,#17171c,#101014);border:1px solid var(--line);border-radius:24px;padding:36px 40px 32px}
+.onas-bank-name{font-family:Montserrat,sans-serif;font-weight:800;font-size:22px}
+.onas-bank-note{color:#c8c8d0;margin:4px 0 22px}
+.onas-payk{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#ff5a73;font-weight:700;margin-bottom:8px}
+.onas-req h2{margin-bottom:22px}
+.onas-req-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.onas-field{background:#0c0c10;border:1px solid #2a2a30;border-radius:14px;padding:14px 16px;min-width:0}
+.onas-field--wide{grid-column:1 / -1}
+.onas-field span{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#c8c8d0;font-weight:700;margin-bottom:6px}
+.onas-vrow{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.onas-vrow strong{font-size:18px;line-height:1.4;font-weight:600;overflow-wrap:anywhere;min-width:0}
+.onas-copy{flex:none;border:1px solid #3a3a42;background:#16161a;color:#fff;border-radius:10px;min-height:40px;padding:0 12px;font:inherit;font-size:13px;font-weight:600;cursor:pointer}
+.onas-copy:hover{border-color:#fff}
+.onas-copy:focus-visible,.onas-fact a:focus-visible,.onas-actions a:focus-visible{outline:2px solid #fff;outline-offset:3px}
+@media(max-width:980px){
+  .onas-story,.onas-founder{grid-template-columns:1fr;gap:28px}
+  .onas-story h2,.onas-why-head h2,.onas-req h2,.onas-founder h2{font-size:34px}
+  .onas-founder blockquote p{font-size:22px}
+  .onas-portrait{max-width:460px}
+  .onas-why{grid-template-columns:1fr 1fr}
+  .onas-why li,.onas-why li:nth-child(4),.onas-why li:nth-child(5){grid-column:auto}
+}
+@media(max-width:640px){
+  .onas-sec{padding:8px 0 48px}
+  .onas-split,.onas-facts,.onas-req-grid,.onas-why{grid-template-columns:1fr}
+  .onas-panel,.onas-fact,.onas-req{padding:20px 16px}
+  .onas-prose p{font-size:16px}
+  .onas-founder blockquote p{font-size:20px}
+  .onas-actions{flex-direction:column}
+  .onas-actions .btn{width:100%;justify-content:center}
+  .onas-vrow{flex-direction:column;align-items:stretch}
+  .onas-copy{align-self:flex-start}
+  .onas-portrait{max-width:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .onas-copy,.onas-actions .btn{transition:none}
+}
