@@ -1096,3 +1096,7 @@ a[href="kb-navigaciya-lidar-vslam.html"] .im{background-image:url(media/r29/cmp-
 }
 body.w .cfilt .chip.chip-soft.on{background:#2E8FE0!important;box-shadow:0 8px 22px rgba(46,143,224,.38)}
 body.w .cfilt .chip:focus-visible{outline-color:rgba(46,143,224,.75)}
+.nbs-g{gap:8px}
+.nbs-g>:last-child:nth-child(odd){grid-column:1 / -1}
+.nbs-c{min-height:0}
+.nbs-l{overflow-x:hidden;overflow-y:auto;flex:1 1 auto;min-height:0;-webkit-overflow-scrolling:touch}

@@ -103,4 +103,19 @@ const nav = index.match(/<nav class="nav">(.*?)<\/nav>/)[1];
 assert.ok(nav.includes('href="dealers.html">Дилерам</a>'));
 const foot = index.match(/<footer[\s\S]*<\/footer>/)[0];
 assert.ok(foot.includes('href="dealers.html">Дилерам</a>'));
+const logos = [
+  ['media/partners/allorobot.png', 'https://allorobot.ru/pictures/logo_20171223094344.png'],
+  ['media/partners/robotsonline.svg', 'https://robotsonline.ru/img/logotype.svg'],
+  ['media/partners/robot4home.png', 'https://robot4home.ru/image/catalog/1.logo/logo-new-2026.png'],
+  ['media/partners/zimani.svg', 'https://zimani.ru/image/catalog/new_logo.svg']
+];
+logos.forEach(function (pair) {
+  assert.ok(html.includes(pair[0]), 'missing asset ref ' + pair[0]);
+  assert.ok(html.includes(pair[1]), 'missing source ' + pair[1]);
+  const st = fs.statSync(path.join(root, pair[0]));
+  assert.ok(st.size > 1000, pair[0] + ' too small');
+});
+assert.strictEqual((html.match(/class="dl-partners"/g) || []).length, 1);
+assert.ok(!html.includes('class="marq"'));
+assert.ok(!html.includes('dl-allorobot'));
 console.log('dealers tests passed', must.length);
