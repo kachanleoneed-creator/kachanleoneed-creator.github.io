@@ -34,7 +34,7 @@ var em=$('.emi .e');if(em)em.onclick=function(){$('.emi').classList.toggle('on')
 var grid=$('#cgrid');if(grid){var st={b:'all',s:'auto',t:new URLSearchParams(location.search).get('t')||'all'};
  var qb=new URLSearchParams(location.search).get('b');if(qb)st.b=qb;
  window.applyF=function(){var ss=st.s==='auto'?(document.body.classList.contains('w')?'winter':'summer'):st.s,n=0;
-  $$('.pc',grid).forEach(function(c){var ok=(st.b==='all'||c.dataset.b===st.b)&&(ss==='all'||c.dataset.s===ss||c.dataset.s==='both'||c.dataset.t==='acc')&&(st.t==='all'||c.dataset.t===st.t);c.style.display=ok?'':'none';if(ok)n++});
+  $$('.pc',grid).forEach(function(c){var ok=(st.b==='all'||c.dataset.b===st.b)&&(ss==='all'||c.dataset.s===ss||c.dataset.s==='both'||(c.dataset.t==='acc'&&c.dataset.s!=='winter'&&c.dataset.s!=='summer'))&&(st.t==='all'||c.dataset.t===st.t);c.style.display=ok?'':'none';if(ok)n++});
   $('#cn').textContent=n;$$('.chip[data-f]').forEach(function(ch){var v=st[ch.dataset.f];ch.classList.toggle('on',v===ch.dataset.v||(ch.dataset.f==='s'&&st.s==='auto'&&ch.dataset.v===ss))})};
  $$('.chip[data-f]').forEach(function(ch){ch.onclick=function(){st[ch.dataset.f]=ch.dataset.v;applyF()}});
   var tog=$('#cfiltTog'),cf=$('#cfilt');

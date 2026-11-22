@@ -1110,6 +1110,10 @@ body{padding-bottom:0!important}
 /* seo-r42: сезонная заглушка — h2 вместо второго h1 */
 .wst-c h2.wst-h{font-size:clamp(30px,6vw,52px);margin:14px 0 12px;line-height:1.05;color:#fff;font-family:Montserrat,sans-serif;font-weight:900}.wst-c h2.wst-h em{font-style:normal;background:linear-gradient(90deg,#ff8a9a,#C41E3A);-webkit-background-clip:text;background-clip:text;color:transparent}
 
+/* r43: цены Yarbo в карточках */
+.pc .pr{flex-wrap:wrap;row-gap:6px}
+.pc .pr small.ykm{order:3;flex-basis:100%;font:500 12px/1.3 Inter,sans-serif;color:var(--mut,#8b8b92)}
+.pc .cartb.ydemo{text-decoration:none}
 /* r43: плашка вместо зимней заглушки, первый экран главной, телефон в мобильной шапке */
 .wst-bar{background:#151517;border-bottom:1px solid rgba(255,255,255,.08);color:#e9e9ec;font:500 14px/1.45 Inter,sans-serif;padding:10px 0}
 .wst-bar .wrap{display:block}
@@ -1132,7 +1136,7 @@ body{padding-bottom:0!important}
  .hero h1{font-size:31px!important;line-height:1.08;margin:12px 0 12px}
  .hero .hslog{font-size:15px;margin:0 0 12px}
  .hero .lead{display:none!important}
- .hero .btns.h43{display:grid!important;grid-template-columns:1fr;gap:10px}
+ body.w .hero .btns.h43.ow,body:not(.w) .hero .btns.h43.os{display:grid!important;grid-template-columns:1fr;gap:10px}
  .hero .btns.h43 .btn{width:100%;justify-content:center}
  .wst-bar{font-size:13px;padding:8px 0}
 }
