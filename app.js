@@ -71,7 +71,7 @@ if($('#map')&&window.L){var m=L.map('map',{crs:L.CRS.EPSG3395,attributionControl
  L.control.layers({'Спутник':sat,'Схема':osm}).addTo(m);
  var pts=[],poly=null,mk=[];function area(){if(pts.length<3)return 0;var R=6378137,a=0;for(var i=0;i<pts.length;i++){var p1=pts[i],p2=pts[(i+1)%pts.length];a+=(p2.lng-p1.lng)*Math.PI/180*(2+Math.sin(p1.lat*Math.PI/180)+Math.sin(p2.lat*Math.PI/180))}return Math.abs(a*R*R/2)}
  function draw(){if(poly)m.removeLayer(poly);poly=L.polygon(pts,{color:'#C41E3A',weight:3,fillOpacity:.25}).addTo(m);var a=Math.round(area());$('#marea').textContent=a?a.toLocaleString('ru-RU')+' м² · '+(a/100).toFixed(1)+' сот.':'—';
-  var rec=a===0?'Поставьте минимум 3 точки':a<600?'RoboUP Raccoon 2SE':a<2500?'Hookii Neomow X2 / L':a<4000?'Lymow One Plus или Yarbo M1 Pro':'Yarbo — свяжемся для выезда';$('#mrec').textContent=rec}
+  var rec=a===0?'Поставьте минимум 3 точки':a<600?'RoboUP Raccoon 2SE':a<2500?'Hookii Neomow X2 / L':a<4000?'Lymow One Plus или Yarbo M1 Pro':'Yarbo — запишем на демонстрацию';$('#mrec').textContent=rec}
  m.on('click',function(e){pts.push(e.latlng);mk.push(L.circleMarker(e.latlng,{radius:5,color:'#fff',fillColor:'#C41E3A',fillOpacity:1}).addTo(m));draw()});
  $('#mclr').onclick=function(){pts=[];mk.forEach(function(x){m.removeLayer(x)});mk=[];draw()};
  $('#mfind').onclick=function(){var q=$('#maddr').value;if(!q)return;fetch('https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=ru&accept-language=ru&q='+encodeURIComponent(q)).then(function(r){return r.json()}).then(function(j){if(j[0])m.setView([+j[0].lat,+j[0].lon],18);else toast('Адрес не найден')}).catch(function(){toast('Поиск недоступен')})};}
