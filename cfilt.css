@@ -35,5 +35,5 @@
   .cfilt .chip{white-space:nowrap;flex:0 0 auto}
   .cfilt-chips{flex:1 1 auto}
 }
-body.w .cfilt .chip.chip-soft.on{background:#2E8FE0!important;box-shadow:0 8px 22px rgba(46,143,224,.38)}
-body.w .cfilt .chip:focus-visible{outline-color:rgba(46,143,224,.75)}
+body.w .cfilt .chip.chip-soft.on{background:#C41E3A!important;box-shadow:0 8px 22px rgba(196,30,58,.38)}
+body.w .cfilt .chip:focus-visible{outline-color:rgba(196,30,58,.75)}
