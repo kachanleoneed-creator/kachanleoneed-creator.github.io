@@ -1106,3 +1106,6 @@ body{padding-bottom:0!important}
 .nbs-g>:last-child:nth-child(odd){grid-column:1 / -1}
 .nbs-c{min-height:0}
 .nbs-l{overflow-x:hidden;overflow-y:auto;flex:1 1 auto;min-height:0;-webkit-overflow-scrolling:touch}
+
+/* seo-r42: сезонная заглушка — h2 вместо второго h1 */
+.wst-c h2.wst-h{font-size:clamp(30px,6vw,52px);margin:14px 0 12px;line-height:1.05;color:#fff;font-family:Montserrat,sans-serif;font-weight:900}.wst-c h2.wst-h em{font-style:normal;background:linear-gradient(90deg,#bfe6ff,#7cc4ff);-webkit-background-clip:text;background-clip:text;color:transparent}
