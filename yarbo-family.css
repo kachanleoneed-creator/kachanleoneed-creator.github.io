@@ -691,3 +691,37 @@ body.yf-page .sbar { display: none !important; }
 .yf-demo-card figcaption span {
   font: 400 13px/1.4 Inter, sans-serif; color: var(--muted);
 }
+/* r43: цена Yarbo — комплект / только модуль */
+.ykp{margin:18px 0 6px;max-width:460px}
+.ykp-r{position:absolute;opacity:0;pointer-events:none}
+.ykp-sw{display:inline-flex;gap:4px;padding:4px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14)}
+.ykp-sw label{cursor:pointer;padding:9px 16px;border-radius:999px;font:600 14px/1 Inter,sans-serif;color:#d9d9de;white-space:nowrap;transition:background .2s,color .2s}
+.ykp-rk:checked~.ykp-sw label[for$="k"],.ykp-rm:checked~.ykp-sw label[for$="m"]{background:#C41E3A;color:#fff}
+.ykp-r:focus-visible~.ykp-sw{outline:2px solid #C41E3A;outline-offset:3px}
+.ykp-v{display:none;margin-top:14px}
+.ykp-rk:checked~.ykp-vk,.ykp-rm:checked~.ykp-vm{display:block}
+.ykp-v b{display:block;font:900 clamp(34px,4.4vw,48px)/1 Montserrat,sans-serif;color:#fff;letter-spacing:-.02em}
+.ykp-v span{display:block;margin-top:8px;font:500 14px/1.45 Inter,sans-serif;color:#b9b9c0}
+.yf-light .ykp-sw,.light .ykp-sw{background:#f1f0ed;border-color:#e3e1dc}.yf-light .ykp-sw label,.light .ykp-sw label{color:#333}
+.yf-light .ykp-v b,.light .ykp-v b{color:#0B0B0C}
+.pr.ykc b{display:block}.pr.ykc small{display:block;font-size:12px;font-weight:500;opacity:.8;margin-top:2px}
+@media(max-width:420px){.ykp-sw label{padding:9px 12px;font-size:13px}}
+/* r43: блок «Как показываем Yarbo» — ряд вертикальных видео 9:16 рядом с текстом */
+.yd43{display:grid;gap:22px;align-items:center}
+.yd43 h2{margin:0 0 10px}
+.yd-steps{margin:14px 0 16px;padding:0;list-style:none;display:grid;gap:8px}
+.yd-steps li{position:relative;padding-left:22px;font:500 15px/1.4 Inter,sans-serif}
+.yd-steps li:before{content:"";position:absolute;left:0;top:7px;width:10px;height:10px;border-radius:50%;background:#C41E3A}
+.yd-txt .yf-note{margin:0 0 16px}
+.yd-row{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:thin}
+.yd-card{position:relative;flex:0 0 58vw;max-width:260px;margin:0;border-radius:18px;overflow:hidden;background:#000;scroll-snap-align:start;aspect-ratio:9/16}
+.yd-card video{display:block;width:100%;height:100%;object-fit:cover;background:#000}
+.yd-card figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;background:linear-gradient(transparent,rgba(0,0,0,.78));color:#fff;font:700 13px/1.25 Montserrat,sans-serif;pointer-events:none}
+@media(min-width:1000px){
+ #demo-visit .yd43{width:min(1400px,calc(100% - 64px));grid-template-columns:minmax(260px,1fr) 2.3fr;gap:32px}
+ .yd-row{display:grid;grid-template-columns:repeat(4,1fr);overflow:visible;padding:0}
+ .yd-card{flex:none;max-width:none;width:100%;max-height:68vh;aspect-ratio:9/16;justify-self:center}
+ .yd-card video{height:100%}
+}
+@media(min-width:1000px) and (max-height:820px){ #demo-visit{padding-top:40px!important;padding-bottom:40px!important} .yd-card{max-height:60vh;width:auto} }
+/* r43-end */
