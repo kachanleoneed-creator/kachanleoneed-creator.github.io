@@ -1342,3 +1342,6 @@ body.w .hdr .season .bw{color:#fff!important}
 @supports not ((-webkit-background-clip:text) or (background-clip:text)){.hs48 .hs-a{background:none!important;-webkit-text-fill-color:#e6ebf2;color:#e6ebf2}}
 @media(max-width:860px){.hero .hslog.hs48{margin:4px 0 14px}.hs48 .hs-ar{width:40px}.hs48 .hs-b{gap:10px}}
 @media(prefers-reduced-motion:reduce){.hs48 .hs-a{animation:none!important;background-position:50% 0,0 0}.hs48 .hs-ar{animation:none!important}}
+
+/* r51-hmeta */
+@media(max-width:400px){.hm9>div{padding:9px 4px}.hm9 b{font-size:14px!important;letter-spacing:-.01em}}
