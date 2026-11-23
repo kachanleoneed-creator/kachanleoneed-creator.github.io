@@ -1345,3 +1345,7 @@ body.w .hdr .season .bw{color:#fff!important}
 
 /* r51-hmeta */
 @media(max-width:400px){.hm9>div{padding:9px 4px}.hm9 b{font-size:14px!important;letter-spacing:-.01em}}
+
+/* r52-nav */
+@media(min-width:1200px) and (max-width:1299px){body:not(.w) .hdr .nav a.ns{display:inline-flex}.hdr .nav a{padding:7px 5px!important;font-size:11.5px!important}}
+.hdr .nav a{white-space:nowrap}
