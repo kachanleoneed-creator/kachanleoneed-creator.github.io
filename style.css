@@ -1241,4 +1241,33 @@ body.w .yf .yf-sec.dark{background-color:#0d0d0f!important}
 .pc .br,.pc .sot,.pc .cmpc,.pc small.ykm{color:#5E5E66!important}
 .pc .sbadge{color:#4A4A52!important}
 /* r44-contrast-end */
+/* r45-ic: круглые иконки Telegram / MAX */
+.btn-tg.ic,.btn-max.ic{width:44px!important;height:44px!important;min-height:44px!important;min-width:44px!important;max-width:44px;padding:0!important;gap:0!important;border-radius:50%!important;flex:0 0 44px!important}
+.btn-tg.ic{box-shadow:0 5px 16px -5px rgba(42,171,238,.65)!important}.btn-max.ic{box-shadow:0 5px 16px -5px rgba(110,70,255,.65)!important}
+.btn-tg.ic>span,.btn-max.ic>span{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap}
+.btn-tg.ic .bm-i,.btn-max.ic .bm-i{width:30px!important;height:30px!important;flex-basis:30px}
+.btn-tg.ic .bm-i circle,.btn-max.ic .bm-i rect{display:none}
+.btn-tg.ic .bm-i{transform:translateX(-1px) scale(1.25)}.btn-max.ic .bm-i{transform:scale(1.18)}
+@media (hover:hover){.btn-tg.ic:hover,.btn-max.ic:hover{transform:translateY(-1px)}}
+.btn-tg.ic:active,.btn-max.ic:active{transform:none}
+/* ровные ряды с VK / телефоном */
+.fsoc,.eh-soc,.mnu-s{gap:10px!important;align-items:center}
+.fsoc>a,.eh-soc>a,.mnu-s>a{width:44px!important;height:44px!important;min-width:44px;flex:0 0 44px!important;border-radius:50%!important;overflow:hidden;display:grid!important;place-items:center;padding:0!important;opacity:1!important}
+.fsoc>a .bi,.eh-soc>a:not(.btn-tg):not(.btn-max) svg{width:44px!important;height:44px!important;border-radius:50%}
+.mnu-s>a:not(.btn-tg):not(.btn-max) svg{width:24px;height:24px}
+.fsoc>a[aria-label="ВКонтакте"],.eh-soc>a[aria-label*="ВКонтакте"]{background:#0077FF!important;border:0!important;box-shadow:0 5px 16px -5px rgba(0,119,255,.6)}
+.fsoc>a.vk-ic svg{width:26px!important;height:26px!important;transform:translate(.5px,1px)}
+.askb{align-items:center}.askb>:is(.btn-tg,.btn-max).ic,.onas-actions>:is(.btn-tg,.btn-max).ic,.yf :is(.btn-tg,.btn-max).ic{flex:0 0 44px!important;min-width:44px!important}
+.onas-actions{align-items:center}
+@media (max-width:600px){.onas-actions>.btn{flex:1 1 auto!important;width:auto!important}}
+.yf .yf-btn+.btn-tg.ic,.yf :is(.btn-tg,.btn-max).ic{align-self:center}
+/* лист «Меню»: ряд быстрых иконок — равные скруглённые квадраты */
+.nbs-k{gap:8px!important}
+.nbs-k>*{flex:1 1 0!important;min-width:0!important;width:auto!important;max-width:none!important;height:46px!important;min-height:46px!important;border-radius:14px!important;padding:0!important;display:grid!important;place-items:center}
+.nbs-k>.btn-tg.ic,.nbs-k>.btn-max.ic{flex:1 1 0!important;width:auto!important;min-width:0!important;max-width:none!important;height:46px!important;min-height:46px!important;border-radius:14px!important;border:1px solid transparent!important}
+/* лист «Меню»: плитки — текст по центру, одинаковая высота */
+.nbs-g{grid-auto-rows:1fr!important;align-items:stretch}
+.nbs-g .nbt{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;min-height:58px;height:100%;box-sizing:border-box;padding:10px 12px!important}
+.nbs-g .nbt b,.nbs-g .nbt small{text-align:center!important;width:100%}
+/* r45-ic-end */
 /* r44-msg-end */
