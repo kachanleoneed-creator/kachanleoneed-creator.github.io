@@ -94,3 +94,7 @@ html.nyp-lock,html.nyp-lock body{overflow:hidden!important}
 .nyp-a>.btn.red{max-width:none}
 .nyd-a>.btn-tg.ic,.nyd-a>.btn-max.ic,.nyp-a>.btn-tg.ic,.nyp-a>.btn-max.ic{flex:0 0 44px!important;align-self:center}
 @media(max-width:860px){.nyd-a>.btn.red{max-width:none}}
+/* r48: строка «СРОЧНО» в стиле стеклянной шапки */
+.nyt{background:linear-gradient(180deg,rgba(13,13,17,.97),rgba(9,9,12,.97))!important;border-bottom:1px solid rgba(255,255,255,.06)!important}
+.nyt-l{background:linear-gradient(180deg,rgba(255,255,255,.22),rgba(255,255,255,0) 55%),linear-gradient(90deg,#9e1430,#d32a47)!important}
+.nyt a{color:#e6ebf2}

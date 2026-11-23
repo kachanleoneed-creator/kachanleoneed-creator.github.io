@@ -97,7 +97,7 @@ if(!('IntersectionObserver'in window)){L.forEach(go);return}var io=new Intersect
 document.addEventListener('click',function(){setTimeout(function(){L.forEach(function(v){if(!v._l){io.unobserve(v);io.observe(v)}})},700)})})();
 
 /* r25 desktop dock toggle */
-(function(){var B=document.body,M=matchMedia('(min-width:861px)'),on=0;function f(){var v=M.matches&&scrollY>140;if(v!==!!on){on=v;B.classList.toggle('dk-on',v)}}addEventListener('scroll',f,{passive:true});M.addEventListener&&M.addEventListener('change',f);f()})();
+(function(){var B=document.body,M=matchMedia('(min-width:861px)'),on=0;function f(){var v=M.matches&&(scrollY>140||innerWidth<1200);if(v!==!!on){on=v;B.classList.toggle('dk-on',v)}}addEventListener('scroll',f,{passive:true});addEventListener('resize',f,{passive:true});M.addEventListener&&M.addEventListener('change',f);f()})();
 
 /* r25 liquid drop */
 (function(){var d=document,B=d.body;if(matchMedia('(prefers-reduced-motion: reduce)').matches||!Element.prototype.animate)return;
