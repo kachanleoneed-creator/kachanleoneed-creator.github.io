@@ -88,3 +88,9 @@ html.nyp-lock,html.nyp-lock body{overflow:hidden!important}
 @media(prefers-reduced-motion:reduce){.nyp-c,.nyp-bg{transition:none!important}.nyp-sn{display:none}}
 .pc .im.face-l .nyfree{transform:scaleX(-1);left:auto;right:10px}
 @media(max-width:860px){.nyd-im{aspect-ratio:4/3}.nyd-im img{object-position:100% center}}
+/* r47: TG/MAX — круглые значки, CTA рядом */
+.nyd-a,.nyp-a{flex-wrap:nowrap!important;gap:10px}
+.nyd-a>.btn.red,.nyp-a>.btn.red{flex:1 1 auto!important;min-width:0;max-width:260px;padding:0 22px}
+.nyp-a>.btn.red{max-width:none}
+.nyd-a>.btn-tg.ic,.nyd-a>.btn-max.ic,.nyp-a>.btn-tg.ic,.nyp-a>.btn-max.ic{flex:0 0 44px!important;align-self:center}
+@media(max-width:860px){.nyd-a>.btn.red{max-width:none}}
