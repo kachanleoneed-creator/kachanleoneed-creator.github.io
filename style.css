@@ -1357,3 +1357,24 @@ body.w .hdr .season .bw{color:#fff!important}
 .tile.live-vp>.vp-dur{position:absolute;top:14px;right:14px;z-index:3;font:700 12px/1 Montserrat,sans-serif;font-style:normal;color:#fff;background:rgba(0,0,0,.55);padding:6px 9px;border-radius:999px;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
 .tile.live-vp span:last-child{overflow-wrap:anywhere}
 @media(prefers-reduced-motion:reduce){.tile.live-vp>.vp-play{transition:none}}
+
+/* r54-ev */
+.tile.ev{cursor:pointer;background:#000;color:#fff;-webkit-tap-highlight-color:transparent}
+.tile.ev>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#000;z-index:0;display:block}
+.tile.ev.on>video{object-fit:contain}
+.tile.ev:after{pointer-events:none;transition:opacity .25s}
+.tile.ev.on:after{opacity:0}
+.tile.ev>.ev-cap{position:relative;z-index:2;pointer-events:none;transition:opacity .25s}
+.tile.ev>.ev-cap span:last-child{display:block;margin-top:4px}
+.tile.ev.on>.ev-cap,.tile.ev.on>.vp-dur{opacity:0}
+.tile.ev>.vp-dur{position:absolute;top:14px;right:14px;z-index:3;font:700 12px/1 Montserrat,sans-serif;font-style:normal;color:#fff;background:rgba(0,0,0,.55);padding:6px 9px;border-radius:999px;pointer-events:none;transition:opacity .25s}
+.tile.ev>.ev-play{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:66px;height:66px;padding:0;border:0;border-radius:50%;display:grid;place-items:center;cursor:pointer;background:radial-gradient(circle at 35% 30%,#ff5a73,#C41E3A 60%,#8e1028);box-shadow:0 10px 30px rgba(196,30,58,.45),inset 0 1px 0 rgba(255,255,255,.35);z-index:4;transition:transform .2s,opacity .2s}
+.tile.ev>.ev-play svg{width:28px;height:28px;margin-left:3px}
+.tile.ev.on>.ev-play{top:50%}
+.tile.ev:hover>.ev-play{transform:translate(-50%,-50%) scale(1.07)}
+.tile.ev.pl>.ev-play{opacity:0;pointer-events:none}
+.tile.ev.wait>.ev-play:before{content:"";position:absolute;inset:-6px;border-radius:50%;border:3px solid rgba(255,255,255,.25);border-top-color:#fff;animation:evs .9s linear infinite}
+.tile.ev.ask>.ev-play{opacity:1;pointer-events:auto}
+@keyframes evs{to{transform:rotate(1turn)}}
+.ev-grid{align-items:stretch}
+@media(prefers-reduced-motion:reduce){.tile.ev>.ev-play,.tile.ev:after,.tile.ev>.ev-cap{transition:none}.tile.ev.wait>.ev-play:before{animation-duration:2s}}
